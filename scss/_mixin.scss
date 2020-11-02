@@ -1,0 +1,8 @@
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+@mixin transition {
+  transition: all 0.3s ease-in-out;
+}

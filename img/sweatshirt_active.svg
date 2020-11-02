@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="24" viewBox="0 0 31 24">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #5d5d5d;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="148" y="208" width="31" height="24" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="1" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="1.414"/>
+      <feFlood result="flood" flood-color="#030303" flood-opacity="0.16"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+      <feImage preserveAspectRatio="none" x="149" y="208" width="28" height="21" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjgiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyOCAyMSI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQpOwogICAgICB9CiAgICA8L3N0eWxlPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQiIHgxPSIxNCIgeTE9IjIxIiB4Mj0iMTQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmZjZWI3Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMjgiIGhlaWdodD0iMjEiLz4KPC9zdmc+Cg=="/>
+      <feComposite result="composite-2" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend-2" in2="blend"/>
+      <feGaussianBlur result="blur-2" stdDeviation="1.414" in="SourceAlpha"/>
+      <feFlood result="flood-2" flood-color="#fff"/>
+      <feComposite result="composite-3" operator="out" in2="blur-2"/>
+      <feOffset result="offset-2" dy="-1"/>
+      <feComposite result="composite-4" operator="in" in2="SourceAlpha"/>
+      <feBlend result="blend-3" in2="blend-2"/>
+    </filter>
+  </defs>
+  <path id="sweatshirt_active" class="cls-1" d="M176.955,227.263C176.84,227.008,176.237,208,166.5,208a0.492,0.492,0,0,0-.48.37c-0.03.1-.755,2.629-3.02,2.629s-2.99-2.524-3.02-2.629a0.5,0.5,0,0,0-.48-0.37c-10.064,0-10.34,19.008-10.456,19.263a0.5,0.5,0,0,0,.131.585l3.5,0.029a0.5,0.5,0,0,0,.7-0.05,0.238,0.238,0,0,0,.02-0.025L156,217v11.5a0.5,0.5,0,0,0,.5.5h13a0.5,0.5,0,0,0,.5-0.5V217l2.6,10.8a0.5,0.5,0,0,0,.7.1,0.109,0.109,0,0,0,.025-0.02l3.5-.029A0.5,0.5,0,0,0,176.955,227.263Z" transform="translate(-148 -208)"/>
+</svg>

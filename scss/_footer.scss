@@ -1,0 +1,15 @@
+#footer {
+  font-size: 13px;
+  padding: 19px 10px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  background: rgb(235, 235, 235);
+  .container {
+    color: rgb(127, 127, 127);
+    line-height: normal;
+    p {
+      padding: 12px 0px;
+    }
+  }
+}

@@ -1,0 +1,225 @@
+#aside__wrap {
+  width: 260px;
+  min-width: 260px;
+  z-index: 111;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  overflow-y: auto;
+}
+.aside__content {
+  width: 260px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding-top: 70px;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #282828;
+  overflow: auto;
+  min-height: 100%;
+}
+.aside__content-top {
+  padding: 0px 30px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.aside__logo {
+  text-align: center;
+  margin-bottom: 50px;
+  //   order: 0;
+}
+.aside__search {
+  //   order: 1;
+}
+.search-form {
+  display: block;
+  position: relative;
+  background: transparent;
+  border-bottom: 2px solid rgb(62, 62, 62);
+  margin-bottom: 45px;
+  height: 24px;
+  overflow: hidden;
+  padding-bottom: 2px;
+  right: 0px;
+  top: 7px;
+  width: 100%;
+}
+input[type="search"],
+input[type="s"] {
+  font-size: 13px;
+  font-weight: bold;
+  font-family: inherit;
+  color: white;
+  outline: none;
+  border: none;
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  background-color: transparent;
+  &::placeholder {
+    color: white;
+    font-weight: normal;
+  }
+}
+.search-submit {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  background: none;
+  border: none;
+  display: block;
+  width: 16px;
+  height: 20px;
+  line-height: 20px;
+  padding: 0px;
+  cursor: pointer;
+  &::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/search.svg) center center / 16px no-repeat;
+  }
+}
+.aside__category-shop {
+  margin-bottom: 3em;
+  ul {
+    li {
+      padding: 5px 0px;
+      font-size: 13px;
+      a {
+        color: rgb(255, 255, 255);
+        display: inline-block;
+        line-height: 20px;
+        padding: 0 0 2px 0;
+        position: relative;
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: uppercase;
+        @include transition;
+        &::after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 0;
+          left: 0;
+          bottom: 0;
+          background-color: #e64927;
+          @include transition;
+        }
+        &:hover {
+          color: #e64927;
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+.aside__bottom-menu {
+  padding: 15px 30px;
+  ul {
+    @include flex;
+    justify-content: space-between;
+    li {
+      max-width: 50%;
+      width: 100%;
+      &:nth-child(1),
+      &:nth-child(3),
+      &:nth-child(9) {
+        display: none;
+      }
+      &:nth-child(4) {
+        order: -1;
+      }
+      &:nth-child(6) {
+        order: -1;
+      }
+      &:nth-child(6),
+      &:nth-child(5),
+      &:nth-child(8) {
+        text-align: right;
+      }
+      a {
+        color: #bababa;
+        text-decoration: none;
+        font-size: 14px;
+      }
+    }
+  }
+}
+.aside__phone {
+  padding: 15px 30px;
+  color: rgb(248, 248, 249);
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  &::before {
+    content: "";
+    display: block;
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    background: url(../img/phone.svg) center center / contain no-repeat;
+  }
+}
+.aside__bottom-footer {
+  width: 100%;
+  background: rgb(34, 34, 34);
+  padding: 10px 30px;
+  @include flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.aside__bottom-social {
+  ul {
+    @include flex;
+    a.icon {
+      margin: 0px 15px 0px 0px;
+      color: rgb(142, 142, 142);
+      font-size: 25px;
+      display: flex;
+      align-items: center;
+      &:before {
+        content: "";
+        font-family: "it-shirts-font";
+        font-family: 25px;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        speak: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+      }
+      &.icon-instagram {
+        &:before {
+          content: "\67";
+        }
+      }
+      &.icon-facebook {
+        &:before {
+          content: "\68";
+        }
+      }
+    }
+  }
+}
+.aside__bottom-currency {
+  width: 100%;
+  max-width: 55px;
+  background: rgb(40, 40, 40);
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-size: 13px;
+  height: 34px;
+}

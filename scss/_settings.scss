@@ -1,0 +1,248 @@
+@import "_mixin";
+@import "_mixin-form";
+@import "_variables";
+
+// settings
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(246, 246, 246);
+  color: rgb(50, 28, 25);
+  font: normal 16px/24px "PT Sans", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+::selection {
+  background: #e64927;
+  color: #fff;
+}
+#content__wrapper {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+}
+.container {
+  max-width: $widthContent;
+  margin: 0 auto;
+}
+h1 {
+  margin: 0.67em 0;
+}
+h1,
+h2,
+.title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+del {
+  display: block;
+  font-family: inherit;
+}
+ins {
+  text-decoration: none;
+  color: red;
+  font-family: inherit;
+  background: none;
+}
+form {
+  width: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul,
+ol {
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+picture {
+  display: inline-block;
+  img {
+    object-fit: cover;
+  }
+}
+.lock {
+  overflow: hidden;
+}
+
+.is-mobile {
+  display: none;
+}
+
+address,
+blockquote,
+dl,
+fieldset,
+figure,
+ol,
+p,
+pre,
+ul {
+  margin: 0;
+  font-style: normal;
+}
+input,
+input[type="submit"] {
+  width: 100%;
+}
+textarea {
+  resize: none;
+}
+
+/* scrollbar */
+::-webkit-scrollbar-button {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  background-color: rgba(136, 136, 136, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(136, 136, 136, 0.5);
+}
+
+::-webkit-resizer {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 4px;
+  height: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* --------- */
+
+// pagination
+#pagination {
+  margin: 0.5em auto 3em;
+  width: 100%;
+  ul {
+    @include flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      margin: 0 3px 0;
+      a,
+      span {
+        display: inline-block;
+        width: 32px;
+        height: 30px;
+        color: rgb(171, 166, 166);
+        font-weight: bold;
+        text-align: center;
+        border: 2px solid transparent;
+        @include transition;
+        &[aria-current="page"] {
+          border: 2px solid rgb(230, 73, 39);
+          color: rgb(230, 73, 39);
+        }
+        &:hover {
+          color: rgb(230, 73, 39);
+        }
+      }
+      span {
+        &:hover {
+          color: rgb(230, 73, 39);
+        }
+      }
+    }
+  }
+}
+
+// breadcumbs
+#breadcumbs {
+  padding: 22px 5px;
+  ul {
+    padding: 0;
+    @include flex;
+    li {
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      &::after {
+        content: "\2192";
+        margin: 0 2px 0 0;
+        color: rgb(51, 51, 51);
+        font-size: 1em;
+      }
+      a,
+      span {
+        color: rgb(51, 51, 51);
+        white-space: nowrap;
+        line-height: 16px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      span {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      &:last-child {
+        &::after {
+          content: none;
+        }
+        a {
+          &:hover {
+            opacity: 1;
+            cursor: inherit;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.burger {
+  display: none;
+}
+
+// contact-form7
+
+.wpcf7-form-control-wrap {
+  width: 100%;
+  max-width: 260px;
+  text-align: center;
+  margin: 0 auto;
+}
+.wpcf7-not-valid-tip {
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 100%;
+  text-align: right;
+}
+.wpcf7 form .wpcf7-response-output {
+  margin: 0 auto;
+}
+.wpcf7 form.invalid .wpcf7-response-output {
+  display: none !important;
+}

@@ -1,0 +1,6 @@
+@mixin focus-input {
+  &:focus::placeholder {
+    color: transparent;
+    @include transition;
+  }
+}

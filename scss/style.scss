@@ -1,0 +1,40 @@
+/* общие настройки */
+@import "_settings";
+@import "_preloader";
+@import "_fonts";
+@import "_variables";
+@import "_mixin";
+@import "_mixin-form";
+
+// header
+@import "_header";
+
+// main
+@import "_main.scss";
+
+// main
+@import "_aside-menu.scss";
+
+// category-page
+@import "_category-page.scss";
+
+// card__product
+@import "_card__product.scss";
+
+// contcts
+@import "_contacts.scss";
+
+// cart
+@import "_cart.scss";
+
+// footer
+@import "_footer.scss";
+
+// modal
+@import "_modal";
+
+// woocomerce-settinge-style
+// @import "_woocomerce.scss";
+
+// media-query
+@import "_media.scss";
