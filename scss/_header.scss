@@ -61,7 +61,7 @@
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
-    speak: none;
+
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     cursor: pointer;
@@ -109,13 +109,21 @@
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid rgb(233, 233, 233);
+  &:last-child {
+    margin-bottom: 0px;
+    border-bottom: 0;
+    padding-bottom: 0;
+    .cart__item-price {
+      bottom: -7px;
+    }
+  }
 }
 .cart__item-del {
   .cart__item-icon {
     color: rgb(230, 73, 39);
     &::after {
       content: "l";
-      speak: none;
+
       line-height: 1;
       -webkit-font-smoothing: antialiased;
       font-family: "it-shirts-font";
@@ -207,7 +215,6 @@
   z-index: 2;
   &::after {
     color: rgb(208, 208, 208);
-    speak: none;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     font-family: it-shirts-font;
@@ -248,5 +255,61 @@
     font-weight: 700;
     font-family: inherit;
     display: inline-block;
+  }
+}
+.modal__footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #fff8e5;
+  border-top: 1px solid #fde4d9;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.bac__to__shop {
+  color: rgb(230, 73, 39);
+  font-size: 14px;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.modal__footer-tottal {
+  margin: 0px 20px 0px auto;
+  font-size: 14px;
+  width: 100%;
+  max-width: 185px;
+  white-space: nowrap;
+}
+.woocommerce-Price-amount{
+  margin-left: 5px;
+}
+.woocommerce-Price-amount,
+.woocommerce-Price-currencySymbol {
+  font-weight: 800;
+  font-size: 30px;
+  font-family: "Gilroy";
+  text-transform: uppercase;
+}
+.modal__footer-checkout {
+  box-shadow: rgba(230, 73, 39, 0.21) 0px 6px 10px 0px;
+  background: linear-gradient(
+    to right,
+    rgb(232, 89, 58) 0%,
+    rgb(243, 114, 53) 100%
+  );
+  border-radius: 2px;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  padding: 14px 20px;
+  white-space: nowrap;
+  display: inline-block;
+  width: 100%;
+  max-width: 210px;
+  &:hover {
+    transform: translateY(-2px);
+    background: rgb(255, 130, 63);
   }
 }
