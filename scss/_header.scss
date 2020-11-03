@@ -100,3 +100,153 @@
   margin-left: 3px;
   text-align: center;
 }
+.cart__item {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(233, 233, 233);
+}
+.cart__item-del {
+  .cart__item-icon {
+    color: rgb(230, 73, 39);
+    &::after {
+      content: "l";
+      speak: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      font-family: "it-shirts-font";
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+    }
+  }
+}
+.cart__item-img {
+  padding: 0px 10px;
+  width: 110px;
+  min-width: 110px;
+  height: 70px;
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+.cart__item-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(100% - 320px);
+  & > a {
+    color: rgb(50, 28, 25);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: left;
+    margin-bottom: 4px;
+  }
+  .cart__item-atribute {
+    display: flex;
+    color: rgb(50, 28, 25);
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    line-height: 1;
+    opacity: 0.5;
+  }
+  .cart__item-atribute__variation {
+    margin-right: 5px;
+  }
+  .cart__item-title__price {
+    color: rgb(50, 28, 25);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+  }
+}
+.cart__item-count {
+  position: relative;
+  height: 30px;
+  text-align: center;
+  width: 110px;
+  display: flex;
+  bottom: -30px;
+  right: 32px;
+}
+.count__number {
+  background: rgb(255, 255, 255);
+  border-radius: 0px;
+  height: 30px;
+  border: 1px solid rgb(221, 221, 221);
+  padding: 0px 30px;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  color: #171717;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: inherit;
+}
+.count__minus,
+.count__plus {
+  display: block;
+  width: 30px;
+  height: 100%;
+  background: rgb(247, 247, 247);
+  border: 1px solid rgb(221, 221, 221);
+  margin: 0px;
+  font-size: 1em;
+  cursor: pointer;
+  color: rgb(69, 69, 69);
+  position: absolute;
+  z-index: 2;
+  &::after {
+    color: rgb(208, 208, 208);
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-family: it-shirts-font;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-size: 16px;
+    position: absolute;
+    top: 6px;
+    left: 7px;
+  }
+}
+.count__minus {
+  left: 0;
+  &::after {
+    content: "n";
+  }
+}
+.count__plus {
+  right: 0;
+  &::after {
+    content: "m";
+  }
+}
+.cart__item-price {
+  position: absolute;
+  right: 0;
+  bottom: 13px;
+  span {
+    max-width: 110px;
+    width: 110px;
+    height: 30px;
+    border: 1px solid rgb(253, 228, 217);
+    background: rgb(255, 248, 229);
+    color: rgb(50, 28, 25);
+    font-size: 16px;
+    font-weight: 700;
+    font-family: inherit;
+    display: inline-block;
+  }
+}
