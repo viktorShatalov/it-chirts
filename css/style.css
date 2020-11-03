@@ -593,6 +593,7 @@ textarea {
   font-size: 1.2em;
   line-height: 20px;
   margin-right: 5px;
+  position: relative;
   top: 3px;
   font-family: "it-shirts-font";
   font-style: normal;
@@ -603,6 +604,34 @@ textarea {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
+}
+
+.cart__btn {
+  display: inline-block;
+  line-height: 20px;
+  padding: 0 0 2px 0;
+  position: relative;
+}
+
+.cart__btn::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  visibility: hidden;
+  background-color: #e64927;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.cart__btn:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  visibility: visible;
 }
 
 .cart_counter {
@@ -1225,57 +1254,108 @@ input[type="s"]::placeholder {
   position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(0);
-          transform: translate(-50%, -50%) scale(0);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 525px;
-  height: 547px;
-  background-image: url(../img/modal__bg.jpg);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
+  max-width: 650px;
+  min-height: 193px;
   z-index: 8;
-  padding: 60px 52px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  background-color: white;
+  border-radius: 2px;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .modal.active {
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.modal__header-title {
+  color: #321c19;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 0;
+  text-transform: uppercase;
+}
+
+.modal__header-title::after {
+  content: "";
+  display: block;
+  width: calc(100% + 10%);
+  height: 4px;
+  background: #ff471f;
+  position: absolute;
+  bottom: calc(0% - 2px);
+  left: -5%;
+}
+
+.modal__content {
+  padding: 20px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.modal__content strong {
+  font-family: inherit;
+}
+
+.modal__content p {
+  margin: 10px 0;
+}
+
+.cart__empty::after, .cart__empty::before,
+.close-button::after,
+.close-button::before {
+  font-family: "it-shirts-font";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.cart__empty {
+  font-size: 13px;
+  text-align: center;
+  height: 24px;
+  width: 100%;
+}
+
+.cart__empty::before {
+  content: "\71";
 }
 
 .close-button {
-  position: absolute;
-  height: 30px;
-  width: 30px;
+  position: relative;
+  height: 15px;
+  width: 15px;
   z-index: 4;
-  top: 13px;
-  right: 23px;
   cursor: pointer;
 }
 
-.close-button span {
-  position: absolute;
-  top: 14px;
-  right: 0;
-  width: 30px;
-  height: 2px;
-  background-color: white;
-  -webkit-transform: rotate(-46deg);
-          transform: rotate(-46deg);
-}
-
-.close-button span::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-  height: 2px;
-  background-color: white;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+.close-button::after {
+  content: "\6c";
 }
 
 #overlay {
@@ -1293,7 +1373,7 @@ input[type="s"]::placeholder {
 }
 
 #overlay.active {
-  opacity: 0.6;
+  opacity: 0.2;
   pointer-events: all;
 }
 

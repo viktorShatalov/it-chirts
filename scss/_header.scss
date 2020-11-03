@@ -54,6 +54,7 @@
     font-size: 1.2em;
     line-height: 20px;
     margin-right: 5px;
+    position: relative;
     top: 3px;
     font-family: "it-shirts-font";
     font-style: normal;
@@ -64,6 +65,28 @@
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     cursor: pointer;
+  }
+}
+.cart__btn {
+  display: inline-block;
+  line-height: 20px;
+  padding: 0 0 2px 0;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+    background-color: #e64927;
+    @include transition;
+    transform: scaleX(0);
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    visibility: visible;
   }
 }
 .cart_counter {

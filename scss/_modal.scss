@@ -3,47 +3,90 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 525px;
-  height: 547px;
-  background-image: url(../img/modal__bg.jpg);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
+  max-width: 650px;
+  min-height: 193px;
   z-index: 8;
-  padding: 60px 52px;
   @include transition;
+  background-color: white;
+  border-radius: 2px;
+  visibility: hidden;
+  opacity: 0;
   &.active {
-    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid rgb(238, 238, 238);
+}
+.modal__header-title {
+  color: rgb(50, 28, 25);
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 0;
+  text-transform: uppercase;
+  &::after {
+    content: "";
+    display: block;
+    width: calc(100% + 10%);
+    height: 4px;
+    background: #ff471f;
+    position: absolute;
+    bottom: calc(0% - 2px);
+    left: -5%;
+  }
+}
+.modal__content {
+  padding: 20px;
+  text-align: center;
+  font-size: 13px;
+  strong {
+    font-family: inherit;
+  }
+  p {
+    margin: 10px 0;
+  }
+}
+.cart__empty,
+.close-button {
+  &::after,
+  &::before {
+    font-family: "it-shirts-font";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.cart__empty {
+  font-size: 13px;
+  text-align: center;
+  height: 24px;
+  width: 100%;
+  &::before {
+    content: "\71";
   }
 }
 .close-button {
-  position: absolute;
-  height: 30px;
-  width: 30px;
+  position: relative;
+  height: 15px;
+  width: 15px;
   z-index: 4;
-  top: 13px;
-  right: 23px;
   cursor: pointer;
-  span {
-    position: absolute;
-    top: 14px;
-    right: 0;
-    width: 30px;
-    height: 2px;
-    background-color: rgb(255, 255, 255);
-    transform: rotate(-46deg);
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 30px;
-      height: 2px;
-      background-color: rgb(255, 255, 255);
-      transform: rotate(90deg);
-    }
+  &::after {
+    content: "\6c";
   }
 }
 
@@ -59,7 +102,7 @@
   z-index: 5;
   @include transition;
   &.active {
-    opacity: 0.6;
+    opacity: 0.2;
     pointer-events: all;
   }
 }
