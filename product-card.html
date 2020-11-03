@@ -24,7 +24,68 @@
         <div class="cart__empty"></div>
         <strong>Ваша корзина пуста</strong>
         <p>Чтобы это исправить выберите и купите понравившуюся футболку.</p>
+        <!-- <div class="cart__item">
+          <div class="cart__item-del">
+            <a href="" class="cart__item-icon"></a>
+          </div>
+          <div class="cart__item-img">
+            <a href="ptoduct__link">
+              <img src="img/img1.jpg" alt="">
+            </a>
+          </div>
+          <div class="cart__item-title">
+            <a href="">Футболка «Развиваю инстинкт автосохранения» для тех, кому дороги нервы</a>
+            <span class="cart__item-atribute"><span class="cart__item-atribute__variation">Цвет: Белая</span><span
+                class="cart__item-atribute__variation">Размер: M</span></span>
+            <span class=" cart__item-title__price">439 грн.</span>
+          </div>
+          <div class="cart__item-count">
+            <a class="count__minus" href=""></a>
+            <input class="count__number" type="text" value="1">
+            <a class="count__plus" href=""></a>
+          </div>
+          <div class="cart__item-price">
+            <span>439 грн.</span>
+          </div>
+        </div>
+        <div class="cart__item">
+          <div class="cart__item-del">
+            <a href="" class="cart__item-icon"></a>
+          </div>
+          <div class="cart__item-img">
+            <a href="ptoduct__link">
+              <img src="img/img1.jpg" alt="">
+            </a>
+          </div>
+          <div class="cart__item-title">
+            <a href="">Футболка «Развиваю инстинкт автосохранения» для тех, кому дороги нервы</a>
+            <span class="cart__item-atribute"><span class="cart__item-atribute__variation">Цвет: Белая</span><span
+                class="cart__item-atribute__variation">Размер: M</span></span>
+            <span class=" cart__item-title__price">439 грн.</span>
+          </div>
+          <div class="cart__item-count">
+            <a class="count__minus" href=""></a>
+            <input class="count__number" type="text" value="1">
+            <a class="count__plus" href=""></a>
+          </div>
+          <div class="cart__item-price">
+            <span>439 грн.</span>
+          </div>
+        </div> -->
       </div>
+      <!-- <div class="modal__footer">
+        <a class="bac__to__shop" href="/">Продолжить покупки</a>
+        <span class="modal__footer-tottal">
+          Итого:
+          <span class="woocommerce-Price-amount amount">
+            87811
+            <span class="woocommerce-Price-currencySymbol">
+              грн.
+            </span>
+          </span>
+        </span>
+        <a class="modal__footer-checkout" href="/checkout/">Оформить заказ</a>
+      </div> -->
     </div>
   </div>
   <div id="overlay"></div>
@@ -214,19 +275,128 @@
           <!-- main -->
           <main id="main" class="container">
             <div class="main__content">
-              
+              <!-- breadcumps -->
+              <nav id="breadcumbs">
+                <ul class="container">
+                  <li>
+                    <a href="#">Главная</a>
+                  </li>
+                  <li>
+                    <span href="#">Футболки любому айтишнику</span>
+                  </li>
+                </ul>
+              </nav>
+              <!-- // -->
+              <article class="product__card">
+                <section class="product__card-left">
+                  <div class="product__card__img-sliders">
+                    <div class="slider-for zoomer">
+                      <div class="card__product-img">
+                        <img class="small" src="img/bg-white.jpg" alt="">
+                        <!-- <img class="large" src="img/bg-white.jpg" alt=""> -->
+                      </div>
+                      <div class="card__product-img">
+                        <img class="small" src="img/bg-black.jpg" alt="">
+                        <!-- <img src="img/bg-black.jpg" alt=""> -->
+                      </div>
+                    </div>
+                    <div class="slider-nav__box">
+                      <div class="slider-nav">
+                        <div class="slider-nav__img"><img src="img/bg-white.jpg" alt=""></div>
+                        <div class="slider-nav__img"><img src="img/bg-black.jpg" alt=""></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product__card-description">
+                    <ul>
+                      <li>
+                        <span>Состав</span>
+                        <span>95% хлопок, 5% эластан. Ткань дышит и тянется.</span>
+                      </li>
+                      <li>
+                        <span>Покрой</span>
+                        <span>Подходит для мужской и женской фигуры.</span>
+                      </li>
+                      <li>
+                        <span>Рисунок</span>
+                        <span>Авторский</span>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+                <section class="product__card-right">
+                  <h1>Футболка «Deadline is Coming», железный трон</h1>
+                  <div class="sku">
+                    <span class="in__stock"><img src="img/iconfinder_check_.svg" alt=""> В наличии</span>
+                    <!-- <span class="out__stock">Нет наличии</span> -->
+                    <span class="product__id">Код товара: <span>IT-030</span></span>
+                  </div>
+                  <div class="price_button">
+                    <span>439 грн.</span>
+                    <div class="quantity">
+                      <button class="single_add_to_cart_button button alt">Купить</button>
+                    </div>
+                  </div>
+                  <div class="product__card-atribute">
+                    <div class="atribute__color">
+                      <span class="atribute__title">Цвет</span>
+                      <span class="white__color active item">Белая</span>
+                      <span class="black__color item">Черная</span>
+                    </div>
+                    <div class="atribute__size">
+                      <span class="atribute__title">Размер</span>
+                      <span class="atribute__size-xs active item">xs</span>
+                      <span class="atribute__size-s item">s</span>
+                      <span class="atribute__size-m item">m</span>
+                      <span class="atribute__size-l item">l</span>
+                      <span class="atribute__size-xl item">xl</span>
+                      <span class="atribute__size-xxl item">xxl</span>
+                    </div>
+                  </div>
+                  <div class="table__size">
+                    <img src="img/shirt_sizes.svg" alt="Таблица размеров">
+                    <span>Таблица размеров</span>
+                  </div>
+                  <div class="product__card-right__description">
+                    <ul class="right__description-items">
+                      <li class="right__description-item">
+                        <img src="img/icon-mona-lisa-gray.png" alt="">
+                        <strong>УНИКАЛЬНЫЙ РИСУНОК</strong>
+                        <span class="item__tooltip-hover">авторская работа наших иллюстраторов</span>
+                      </li>
+                      <li class="right__description-item">
+                        <img src="img/icon-washing-gray.png" alt="">
+                        <strong>ДОЛГИЙ СРОК СЛУЖБЫ</strong>
+                        <span class="item__tooltip-hover">высокое качество ткани и рисунка обеспечивает
+                          износостойкость</span>
+                      </li>
+                      <li class="right__description-item">
+                        <img src="img/icon-cotton-gray.png" alt="">
+                        <strong>ПРЕМИАЛЬНОЕ КАЧЕСТВО</strong>
+                        <span class="item__tooltip-hover">лучшая ткань и высочайшее качество пошива</span>
+                      </li>
+                      <li class="right__description-item">
+                        <img src="img/icon-tshirt-gray.png" alt="">
+                        <strong>СТИЛЬНЫЙ ПОКРОЙ</strong>
+                        <span class="item__tooltip-hover">футболки отлично сидят на любой фигуре</span>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
             </div>
-          </main>
-          <!-- footer -->
-          <footer id="footer">
-            <div class="container">
-              <p>© Интернет-магазин брендовой одежды для IT-сообщества IT-shirts™ Все изображения являются
-                собственностью магазина и охраняются авторским правом.</p>
-            </div>
-          </footer>
+            </article>
         </div>
-      </section>
+        </main>
+        <!-- footer -->
+        <footer id="footer">
+          <div class="container">
+            <p>© Интернет-магазин брендовой одежды для IT-сообщества IT-shirts™ Все изображения являются
+              собственностью магазина и охраняются авторским правом.</p>
+          </div>
+        </footer>
     </div>
+    </section>
+  </div>
   </div>
 
   <script src="js/jquery/jquery.min.js"></script>

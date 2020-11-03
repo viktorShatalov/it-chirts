@@ -86,20 +86,18 @@ jQuery(document).ready(function ($) {
   // sliders
 
   jQuery(".slider-for").slick({
-    arrows: true,
+    arrows: false,
     dots: false,
     autoplay: false,
+    infinite: false,
     asNavFor: ".slider-nav",
-    fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     draggable: false,
     responsive: [
       {
         breakpoint: 480,
-        settings: {
-          draggable: false,
-        },
+        settings: {},
       },
     ],
   });
@@ -107,7 +105,6 @@ jQuery(document).ready(function ($) {
   jQuery(".slider-nav").slick({
     arrows: false,
     dots: false,
-    infinite: false,
     asNavFor: ".slider-for",
     slidesToShow: 5,
     slidesToScroll: 5,
@@ -118,11 +115,40 @@ jQuery(document).ready(function ($) {
     responsive: [
       {
         breakpoint: 480,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 2,
-        },
+        settings: {},
       },
     ],
   });
+
+  // zoom
+
+  // const zoomMargin = 1;
+
+  // function startZoom(e) {
+  //   $(".zoomer .large")
+  //     .css("left", $(this).width() + zoomMargin)
+  //     .show(); // Контейнер c большим изображением становится видимым.
+  // }
+
+  // function moveZoom(e) {
+  //   var offset = $(this).offset(), // В переменной offset хранятся координаты блока с миниатюрой
+  //     x = e.pageX - offset.left, // В переменной хранится координата X курсора мыши относительно блока с миниатюрой
+  //     y = e.pageY - offset.top; // Координата Y курсора мыши.
+  //   (w = $(this).width()), // Ширина миниатюры
+  //     (h = $(this).height()), // Высота миниатюры
+  //     // Позиционирование фона большого изображения относительно того, куда указывает курсор на миниатюре.
+  //     $(".large").css({
+  //       left: (x / w) * 100 + "% ",
+  //       top: (y / h) * 100 + "%",
+  //     });
+  // }
+
+  // function endZoom(e) {
+  //   $(".zoomer .large").hide(); // Контейнер с большим изображением скрывается
+  // }
+  // $(".small").on({
+  //   mouseenter: startZoom, // При наведении мыши на миниатюру срабатывает функция startZoom
+  //   mousemove: moveZoom, // Когда курсор мыши перемещается внутри миниатюры срабатывает функция moveZoom
+  //   mouseleave: endZoom, // Когда мышь уходит из области миниатюры срабатывает функция endZoom
+  // });
 });
