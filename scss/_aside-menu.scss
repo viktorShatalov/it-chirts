@@ -93,9 +93,24 @@ input[type="s"] {
       border-bottom: 1px solid rgb(62, 62, 62);
     }
   }
-  ul {
+}
+.aside__category-shop-title {
+  display: inline-block;
+  width: 260px;
+  left: -30px;
+  padding: 10px 0px 10px 30px;
+  text-transform: uppercase;
+  color: white;
+  position: relative;
+  font-weight: bold;
+  border-top: 1px solid rgb(62, 62, 62);
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  @include transition;
+  ul.submenu {
     padding-left: 20px;
     margin: 10px 0;
+    display: none;
     li {
       padding: 5px 0px;
       font-size: 13px;
@@ -128,20 +143,6 @@ input[type="s"] {
       }
     }
   }
-}
-.aside__category-shop-title {
-  display: inline-block;
-  width: 260px;
-  left: -30px;
-  padding: 10px 0px 10px 30px;
-  text-transform: uppercase;
-  color: white;
-  position: relative;
-  font-weight: bold;
-  border-top: 1px solid rgb(62, 62, 62);
-  border-bottom: 1px solid transparent;
-  cursor: pointer;
-  @include transition;
   &:hover {
     color: rgb(230, 73, 39);
     &::after {

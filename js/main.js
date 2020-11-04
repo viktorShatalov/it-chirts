@@ -138,9 +138,9 @@ jQuery(document).ready(function ($) {
 
   // jQuery(".aside__category-shop-menu ul li:not(:first)").hide();
 
-  jQuery(".aside__category-shop-title").on("click", function () {
-    jQuery(this).next().slideToggle(500);
-    jQuery(this).next().toggleClass("active");
+  jQuery(".aside__category-shop-title").on("click", function (e) {
+    e.preventDefault();
+    jQuery(".submenu").slideToggle(500);
     jQuery(this).toggleClass("active");
   });
 

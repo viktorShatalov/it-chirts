@@ -1365,49 +1365,6 @@ input[type="s"]::placeholder {
   border-bottom: 1px solid #3e3e3e;
 }
 
-.aside__category-shop-menu ul {
-  padding-left: 20px;
-  margin: 10px 0;
-}
-
-.aside__category-shop-menu ul li {
-  padding: 5px 0px;
-  font-size: 13px;
-}
-
-.aside__category-shop-menu ul li a {
-  color: white;
-  display: inline-block;
-  line-height: 20px;
-  padding: 0 0 2px 0;
-  position: relative;
-  font-size: 13px;
-  font-weight: bold;
-  text-transform: uppercase;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-
-.aside__category-shop-menu ul li a::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 0;
-  left: 0;
-  bottom: 0;
-  background-color: #e64927;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-
-.aside__category-shop-menu ul li a:hover {
-  color: #e64b28;
-}
-
-.aside__category-shop-menu ul li a:hover::after {
-  width: 100%;
-}
-
 .aside__category-shop-title {
   display: inline-block;
   width: 260px;
@@ -1422,6 +1379,50 @@ input[type="s"]::placeholder {
   cursor: pointer;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
+}
+
+.aside__category-shop-title ul.submenu {
+  padding-left: 20px;
+  margin: 10px 0;
+  display: none;
+}
+
+.aside__category-shop-title ul.submenu li {
+  padding: 5px 0px;
+  font-size: 13px;
+}
+
+.aside__category-shop-title ul.submenu li a {
+  color: white;
+  display: inline-block;
+  line-height: 20px;
+  padding: 0 0 2px 0;
+  position: relative;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.aside__category-shop-title ul.submenu li a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #e64927;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.aside__category-shop-title ul.submenu li a:hover {
+  color: #e64b28;
+}
+
+.aside__category-shop-title ul.submenu li a:hover::after {
+  width: 100%;
 }
 
 .aside__category-shop-title:hover {
