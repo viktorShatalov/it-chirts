@@ -19,6 +19,7 @@
   width: 100%;
   height: 50px;
   bottom: 20px;
+  left: -25px;
 }
 .slider-for {
   margin-bottom: 10px;
@@ -32,11 +33,13 @@
   }
 }
 .slider-nav {
+  width: 100%;
   .slider-nav__img {
     width: 50px;
     height: 50px;
     cursor: pointer;
     margin-right: 10px;
+    position: relative;
     img {
       width: 100%;
       height: 100%;
@@ -45,7 +48,7 @@
     &.slick-current {
       &::after {
         background: rgb(222, 83, 60);
-        // content: "";
+        content: "";
         position: absolute;
         left: 0px;
         bottom: 0px;
@@ -140,8 +143,7 @@
   font-size: 14px;
   margin: 20px 0px 0px;
 }
-.atribute__color,
-.atribute__size {
+.atribute__items {
   display: grid;
   grid-template-columns: 93px 1fr 1fr;
   grid-gap: 10px;
@@ -159,7 +161,7 @@
     }
   }
 }
-.atribute__size {
+.item__size {
   grid-template-columns: 88px repeat(6, 1fr);
   .item {
     text-transform: uppercase;

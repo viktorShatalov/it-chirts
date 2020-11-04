@@ -88,8 +88,6 @@ jQuery(document).ready(function ($) {
   jQuery(".slider-for").slick({
     arrows: false,
     dots: false,
-    autoplay: false,
-    infinite: false,
     asNavFor: ".slider-nav",
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -106,12 +104,11 @@ jQuery(document).ready(function ($) {
     arrows: false,
     dots: false,
     asNavFor: ".slider-for",
-    slidesToShow: 5,
-    slidesToScroll: 5,
-    infinite: false,
-    autoplay: false,
     focusOnSelect: true,
     draggable: false,
+    variableWidth: true,
+    centerMode: true,
+    infinite: false,
     responsive: [
       {
         breakpoint: 480,
@@ -119,6 +116,30 @@ jQuery(document).ready(function ($) {
       },
     ],
   });
+
+  // change atribute
+  $(".item__type .item").on("click", function () {
+    $(".item__type .item").removeClass("active");
+    $(this).addClass("active");
+  });
+  $(".item__color .item").on("click", function () {
+    $(".item__color .item").removeClass("active");
+    $(this).addClass("active");
+  });
+  $(".item__size .item").on("click", function () {
+    $(".item__size .item").removeClass("active");
+    $(this).addClass("active");
+  });
+
+  //category menu accerdeon
+
+  jQuery(".aside__category-shop-title").on("click", function () {
+    jQuery(this).next().slideToggle(500);
+    jQuery(this).next().toggleClass("active");
+    jQuery(this).toggleClass("active");
+  });
+
+  // jQuery(".table__size")
 
   // zoom
 

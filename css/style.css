@@ -1017,6 +1017,8 @@ textarea {
 
 .item__img-top,
 .item__img-bottom {
+  width: 100%;
+  height: 100%;
   display: block;
   position: absolute;
   top: 0;
@@ -1355,8 +1357,13 @@ input[type="s"]::placeholder {
   background: url(../img/search.svg) center center/16px no-repeat;
 }
 
-.aside__category-shop {
+.aside__category-shop:last-child {
   margin-bottom: 3em;
+}
+
+.aside__category-shop ul {
+  padding-left: 20px;
+  display: none;
 }
 
 .aside__category-shop ul li {
@@ -1390,11 +1397,52 @@ input[type="s"]::placeholder {
 }
 
 .aside__category-shop ul li a:hover {
-  color: #e64927;
+  color: #e64b28;
 }
 
 .aside__category-shop ul li a:hover::after {
   width: 100%;
+}
+
+.aside__category-shop-title {
+  display: inline-block;
+  width: 260px;
+  left: -30px;
+  padding: 10px 0px 10px 30px;
+  text-transform: uppercase;
+  color: white;
+  position: relative;
+  font-weight: bold;
+  border-top: 1px solid #3e3e3e;
+  border-bottom: 1px solid #3e3e3e;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.aside__category-shop-title:hover {
+  color: #e64927;
+}
+
+.aside__category-shop-title:hover::after {
+  border-top-color: #e64927;
+}
+
+.aside__category-shop-title::after {
+  content: "";
+  border: 5px solid transparent;
+  border-top: 5px solid white;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.aside__category-shop-title.active::after {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  top: 15px;
 }
 
 .aside__bottom-menu {
@@ -1579,6 +1627,7 @@ input[type="s"]::placeholder {
   width: 100%;
   height: 50px;
   bottom: 20px;
+  left: -25px;
 }
 
 .slider-for {
@@ -1596,11 +1645,16 @@ input[type="s"]::placeholder {
      object-fit: cover;
 }
 
+.slider-nav {
+  width: 100%;
+}
+
 .slider-nav .slider-nav__img {
   width: 50px;
   height: 50px;
   cursor: pointer;
   margin-right: 10px;
+  position: relative;
 }
 
 .slider-nav .slider-nav__img img {
@@ -1612,6 +1666,7 @@ input[type="s"]::placeholder {
 
 .slider-nav .slider-nav__img.slick-current::after {
   background: #de533c;
+  content: "";
   position: absolute;
   left: 0px;
   bottom: 0px;
@@ -1735,8 +1790,7 @@ input[type="s"]::placeholder {
   margin: 20px 0px 0px;
 }
 
-.atribute__color,
-.atribute__size {
+.atribute__items {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 93px 1fr 1fr;
@@ -1746,27 +1800,25 @@ input[type="s"]::placeholder {
   text-align: center;
 }
 
-.atribute__color .item,
-.atribute__size .item {
+.atribute__items .item {
   border: 2px solid #fbfbfb;
   color: black;
   background: #fbfbfb;
   cursor: pointer;
 }
 
-.atribute__color .item.active,
-.atribute__size .item.active {
+.atribute__items .item.active {
   border: 2px solid #e64927;
   background: #fbfbfb;
   font-weight: bold;
 }
 
-.atribute__size {
+.item__size {
   -ms-grid-columns: 88px (1fr)[6];
       grid-template-columns: 88px repeat(6, 1fr);
 }
 
-.atribute__size .item {
+.item__size .item {
   text-transform: uppercase;
 }
 
