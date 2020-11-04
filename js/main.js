@@ -91,8 +91,10 @@ jQuery(document).ready(function ($) {
     asNavFor: ".slider-nav",
     slidesToShow: 1,
     slidesToScroll: 1,
+    infinite: false,
     draggable: false,
     speed: 300,
+    adaptiveHeight: true,
     responsive: [
       {
         breakpoint: 480,
@@ -141,43 +143,16 @@ jQuery(document).ready(function ($) {
   });
 
   jQuery(".aside__category-shop-title").on("click", function (e) {
-    $(this).children(".submenu").stop(true, true).toggle("slow");
+    $(this).children(".submenu").stop(true, true).toggle(350);
     jQuery(this).toggleClass("active");
   });
+
+  //table size
 
   jQuery(".table__size").on("click", function () {
     jQuery(".table__size-pseudo").toggleClass("active");
   });
 
   // zoom
-
-  // const zoomMargin = 1;
-
-  // function startZoom(e) {
-  //   $(".zoomer .large")
-  //     .css("left", $(this).width() + zoomMargin)
-  //     .show(); // Контейнер c большим изображением становится видимым.
-  // }
-
-  // function moveZoom(e) {
-  //   var offset = $(this).offset(), // В переменной offset хранятся координаты блока с миниатюрой
-  //     x = e.pageX - offset.left, // В переменной хранится координата X курсора мыши относительно блока с миниатюрой
-  //     y = e.pageY - offset.top; // Координата Y курсора мыши.
-  //   (w = $(this).width()), // Ширина миниатюры
-  //     (h = $(this).height()), // Высота миниатюры
-  //     // Позиционирование фона большого изображения относительно того, куда указывает курсор на миниатюре.
-  //     $(".large").css({
-  //       left: (x / w) * 100 + "% ",
-  //       top: (y / h) * 100 + "%",
-  //     });
-  // }
-
-  // function endZoom(e) {
-  //   $(".zoomer .large").hide(); // Контейнер с большим изображением скрывается
-  // }
-  // $(".small").on({
-  //   mouseenter: startZoom, // При наведении мыши на миниатюру срабатывает функция startZoom
-  //   mousemove: moveZoom, // Когда курсор мыши перемещается внутри миниатюры срабатывает функция moveZoom
-  //   mouseleave: endZoom, // Когда мышь уходит из области миниатюры срабатывает функция endZoom
-  // });
+  jQuery(".card__product-img").zoom({});
 });
