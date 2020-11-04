@@ -92,6 +92,7 @@ jQuery(document).ready(function ($) {
     slidesToShow: 1,
     slidesToScroll: 1,
     draggable: false,
+    speed: 300,
     responsive: [
       {
         breakpoint: 480,
@@ -109,6 +110,8 @@ jQuery(document).ready(function ($) {
     variableWidth: true,
     centerMode: true,
     infinite: false,
+    slidesToShow: 2,
+    slidesToScroll: 2,
     responsive: [
       {
         breakpoint: 480,
@@ -133,13 +136,17 @@ jQuery(document).ready(function ($) {
 
   //category menu accerdeon
 
+  // jQuery(".aside__category-shop-menu ul li:not(:first)").hide();
+
   jQuery(".aside__category-shop-title").on("click", function () {
     jQuery(this).next().slideToggle(500);
     jQuery(this).next().toggleClass("active");
     jQuery(this).toggleClass("active");
   });
 
-  // jQuery(".table__size")
+  jQuery(".table__size").on("click", function () {
+    jQuery(".table__size-pseudo").toggleClass("active");
+  });
 
   // zoom
 
