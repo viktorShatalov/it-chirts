@@ -136,11 +136,12 @@ jQuery(document).ready(function ($) {
 
   //category menu accerdeon
 
-  // jQuery(".aside__category-shop-menu ul li:not(:first)").hide();
+  jQuery(".aside__category-shop-title>a").click(function (e) {
+    e.preventDefault();
+  });
 
   jQuery(".aside__category-shop-title").on("click", function (e) {
-    e.preventDefault();
-    jQuery(".submenu").slideToggle(500);
+    $(this).children(".submenu").stop(true, true).toggle("slow");
     jQuery(this).toggleClass("active");
   });
 
