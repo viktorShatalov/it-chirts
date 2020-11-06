@@ -112,8 +112,8 @@ jQuery(document).ready(function ($) {
     variableWidth: true,
     centerMode: true,
     infinite: false,
-    slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     responsive: [
       {
         breakpoint: 480,
