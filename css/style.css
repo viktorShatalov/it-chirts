@@ -91,13 +91,31 @@ ol li {
   list-style: none;
 }
 
-picture {
-  display: inline-block;
-}
-
-picture img {
+img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.wp-content p,
+.wp-content ul:not(.page-numbers),
+.wp-content ol,
+.tabs__content > p,
+.tabs__content > ul,
+.tabs__content > li,
+.tabs__content > ul li {
+  margin-bottom: 1em;
+}
+
+.wp-content ul:not(.page-numbers):not(.blog-list) li,
+.tabs__content ul li {
+  padding-left: 20px;
+}
+
+.wp-content ul:not(.page-numbers):not(.blog-list) li::before,
+.tabs__content ul li::before {
+  color: #e64927;
+  content: "\2022";
+  margin-right: 10px;
 }
 
 .lock {
@@ -494,6 +512,116 @@ textarea {
   font-style: normal;
 }
 
+.tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.tablinks {
+  color: #270e0a;
+  display: inline-block;
+  font-size: 14px;
+  position: relative;
+  width: 33%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tablinks .tablinks__title {
+  display: inline-block;
+  margin: 0 1em;
+  padding: 0 0 1em 0;
+  position: relative;
+}
+
+.tablinks .tablinks__title::before {
+  top: 5px;
+  content: "\44";
+  color: #b2b2b2;
+  font-size: 1.5em;
+  vertical-align: middle;
+  position: absolute;
+  left: -30px;
+}
+
+.tablinks:nth-child(2) .tablinks__title::before {
+  content: "C";
+}
+
+.tablinks:nth-child(3) .tablinks__title::before {
+  content: "E";
+}
+
+.tablinks.active .tablinks__title {
+  font-weight: bold;
+}
+
+.tablinks.active .tablinks__title::after {
+  content: "";
+  background: #de533c;
+  width: 58%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0 0 -2px 0;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: 3;
+}
+
+.tabs__content {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  border-top: 1px solid #e4e4e4;
+  padding: 30px;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.tabs__content > * {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: show__block;
+          animation-name: show__block;
+}
+
+.tabs__content.active {
+  display: block;
+}
+
+@-webkit-keyframes show__block {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show__block {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #header {
   position: fixed;
   left: 260px;
@@ -559,6 +687,18 @@ textarea {
   text-decoration: underline;
 }
 
+#cart::before,
+li.tablinks span::before {
+  font-family: "it-shirts-font";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+}
+
 #cart {
   width: 120px;
   background: white;
@@ -578,14 +718,6 @@ textarea {
   margin-right: 5px;
   position: relative;
   top: 3px;
-  font-family: "it-shirts-font";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
 }
 
 .cart__btn {
@@ -902,7 +1034,7 @@ textarea {
 }
 
 .main__content {
-  padding-top: 40px;
+  padding-top: 80px;
   position: relative;
   margin: 0px auto;
   min-height: 100%;
@@ -986,21 +1118,21 @@ textarea {
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  grid-gap: 0 17px;
+  grid-gap: 30px 20px;
+  margin-bottom: 30px;
 }
 
 .product__item {
-  padding-bottom: 50px;
   background: white;
   -webkit-box-shadow: rgba(5, 5, 5, 0.05) 0px 2px 4px 0px;
           box-shadow: rgba(5, 5, 5, 0.05) 0px 2px 4px 0px;
   display: inline-block;
   overflow: hidden;
-  margin: 0px 0 30px;
   padding: 5px 5px 15px;
   position: relative;
   width: 100%;
   max-width: 226px;
+  min-height: 332px;
 }
 
 .product__item:hover {
@@ -1011,7 +1143,7 @@ textarea {
 .product__item-img {
   position: relative;
   display: block;
-  width: 216px;
+  width: 215px;
   height: 172px;
 }
 
@@ -1043,9 +1175,11 @@ textarea {
 .product__item-title {
   display: block;
   font-size: 14px;
-  line-height: 18px;
-  margin-bottom: 10px;
+  line-height: 16px;
   padding: 15px 16px 0;
+  height: 65px;
+  overflow: hidden;
+  margin-bottom: 6px;
 }
 
 .product__item-title:hover {
@@ -1625,6 +1759,19 @@ input[type="s"]::placeholder {
           box-shadow: rgba(5, 5, 5, 0.05) 0px 2px 4px 0px;
   margin-bottom: 2em;
   width: 100%;
+}
+
+.product__card-content {
+  padding-bottom: 120px;
+}
+
+.product__card-content h2 {
+  color: #c3c3c3;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: normal;
+}
+
+.product__card-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1636,10 +1783,6 @@ input[type="s"]::placeholder {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.product__card-left {
-  padding: 0px 0px 30px;
 }
 
 .product__card__img-sliders {
@@ -1703,7 +1846,7 @@ input[type="s"]::placeholder {
   width: 100%;
   max-width: 479px;
   margin-right: 30px;
-  padding: 20px 0px 30px;
+  padding: 20px 0px 0;
 }
 
 .product__card-right h1 {
@@ -1885,7 +2028,7 @@ input[type="s"]::placeholder {
 }
 
 .product__card-right__description {
-  margin: 2em 0px;
+  margin: 2em 0px 0;
   width: 100%;
 }
 
@@ -1897,7 +2040,7 @@ input[type="s"]::placeholder {
 
 .right__description-item {
   width: 120px;
-  height: auto;
+  height: 100%;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
   padding: 10px;

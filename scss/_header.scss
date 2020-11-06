@@ -38,7 +38,19 @@
     }
   }
 }
-
+#cart,
+li.tablinks span {
+  &::before {
+    font-family: "it-shirts-font";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+  }
+}
 #cart {
   width: 120px;
   background: rgb(255, 255, 255);
@@ -56,15 +68,6 @@
     margin-right: 5px;
     position: relative;
     top: 3px;
-    font-family: "it-shirts-font";
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    cursor: pointer;
   }
 }
 .cart__btn {
@@ -283,7 +286,7 @@
   max-width: 185px;
   white-space: nowrap;
 }
-.woocommerce-Price-amount{
+.woocommerce-Price-amount {
   margin-left: 5px;
 }
 .woocommerce-Price-amount,

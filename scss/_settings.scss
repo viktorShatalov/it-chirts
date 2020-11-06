@@ -70,10 +70,25 @@ ol {
     list-style: none;
   }
 }
-picture {
-  display: inline-block;
-  img {
-    object-fit: cover;
+img {
+  object-fit: cover;
+}
+.wp-content p,
+.wp-content ul:not(.page-numbers),
+.wp-content ol,
+.tabs__content > p,
+.tabs__content > ul,
+.tabs__content > li,
+.tabs__content > ul li {
+  margin-bottom: 1em;
+}
+.wp-content ul:not(.page-numbers):not(.blog-list) li,
+.tabs__content ul li {
+  padding-left: 20px;
+  &::before {
+    color: #e64927;
+    content: "\2022";
+    margin-right: 10px;
   }
 }
 .lock {

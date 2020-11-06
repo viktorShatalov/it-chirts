@@ -1,0 +1,86 @@
+.tab {
+  @include flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.tablinks {
+  color: #270e0a;
+  display: inline-block;
+  font-size: 14px;
+  position: relative;
+  width: 33%;
+  text-align: center;
+  cursor: pointer;
+  .tablinks__title {
+    display: inline-block;
+    margin: 0 1em;
+    padding: 0 0 1em 0;
+    position: relative;
+    &::before {
+      top: 5px;
+      content: "\44";
+      color: rgb(178, 178, 178);
+      font-size: 1.5em;
+      vertical-align: middle;
+      position: absolute;
+      left: -30px;
+    }
+  }
+  &:nth-child(2) {
+    .tablinks__title {
+      &::before {
+        content: "C";
+      }
+    }
+  }
+  &:nth-child(3) {
+    .tablinks__title {
+      &::before {
+        content: "E";
+      }
+    }
+  }
+  &.active {
+    .tablinks__title {
+      font-weight: bold;
+      &::after {
+        content: "";
+        background: rgb(222, 83, 60);
+        width: 58%;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin: 0 0 -2px 0;
+        transform: translate(-50%, 0);
+        z-index: 3;
+      }
+    }
+  }
+}
+
+.tabs__content {
+  @include transition;
+  border-top: 1px solid rgb(228, 228, 228);
+  padding: 30px;
+  height: 100%;
+  width: 100%;
+  display: none;
+  & > * {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: show__block;
+  }
+  &.active {
+    display: block;
+  }
+}
+@keyframes show__block {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

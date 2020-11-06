@@ -155,4 +155,31 @@ jQuery(document).ready(function ($) {
 
   // zoom
   jQuery(".card__product-img").zoom({});
+
+  // tabs
+
+  let tab = function () {
+    let tabLink = document.querySelectorAll(".tablinks");
+    let tabContent = document.querySelectorAll(".tabs__content");
+    let tabName;
+    tabLink.forEach((item) => {
+      item.addEventListener("click", selsectTabLink);
+    });
+    function selsectTabLink() {
+      tabLink.forEach((item) => {
+        item.classList.remove("active");
+      });
+      this.classList.add("active");
+      tabName = this.getAttribute("datat-tab-name");
+      selectTabContent(tabName);
+    }
+    const selectTabContent = (tabName) => {
+      tabContent.forEach((item) => {
+        item.classList.contains(tabName)
+          ? item.classList.add("active")
+          : item.classList.remove("active");
+      });
+    };
+  };
+  tab();
 });
