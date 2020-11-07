@@ -33,10 +33,8 @@
   margin-bottom: 50px;
   //   order: 0;
 }
-.aside__search {
-  //   order: 1;
-}
-.search-form {
+.search-form,
+.dgwt-wcas-search-wrapp {
   display: block;
   position: relative;
   background: transparent;
@@ -48,22 +46,38 @@
   right: 0px;
   top: 7px;
   width: 100%;
+  min-width: 200px;
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/search.svg) center center / 16px no-repeat;
+    cursor: pointer;
+  }
 }
 input[type="search"],
 input[type="s"] {
-  font-size: 13px;
+  padding: 0 !important;
+  font-size: 13px !important;
   font-weight: bold;
-  font-family: inherit;
-  color: white;
+  font-family: inherit !important;
+  color: white !important;
   outline: none;
-  border: none;
+  border: none !important;
   display: block;
-  height: 20px;
-  line-height: 20px;
-  background-color: transparent;
+  height: 20px !important;
+  line-height: 20px !important;
+  background-color: transparent !important;
   &::placeholder {
-    color: white;
-    font-weight: normal;
+    color: white !important;
+    opacity: 1 !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    font: normal 16px/24px "PT Sans", sans-serif !important;
   }
 }
 .search-submit {
@@ -77,14 +91,6 @@ input[type="s"] {
   height: 20px;
   line-height: 20px;
   padding: 0px;
-  cursor: pointer;
-  &::before {
-    content: "";
-    display: block;
-    width: 16px;
-    height: 16px;
-    background: url(../img/search.svg) center center / 16px no-repeat;
-  }
 }
 
 .aside__category-shop-title {
@@ -258,7 +264,6 @@ input[type="s"] {
         font-weight: normal;
         font-variant: normal;
         text-transform: none;
-        speak: none;
         line-height: 1;
         -webkit-font-smoothing: antialiased;
       }
@@ -284,4 +289,15 @@ input[type="s"] {
   font-size: 13px;
   height: 34px;
   padding-top: 5px;
+}
+.dgwt-wcas-no-submit .dgwt-wcas-ico-magnifier {
+  display: none;
+}
+.dgwt-wcas-close:not(.dgwt-wcas-inner-preloader) {
+  background: #282828;
+  opacity: 1;
+}
+.dgwt-wcas-search-wrapp svg, {
+  position: relative;
+  right: -12px;
 }

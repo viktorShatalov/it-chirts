@@ -7,7 +7,7 @@ jQuery(document).ready(function ($) {
   });
 
   // subscribe-instagram
-  jQuery(".subscribe-instagram").hide();
+  // jQuery(".subscribe-instagram").hide();
   jQuery(".subscribe-instagram i").on("click", function () {
     jQuery(this).parent().hide();
   });
@@ -102,7 +102,7 @@ jQuery(document).ready(function ($) {
       },
     ],
   });
-
+  const settingsNav = {};
   jQuery(".slider-nav").slick({
     arrows: false,
     dots: false,
@@ -155,29 +155,12 @@ jQuery(document).ready(function ($) {
   menuBtn.on("click", function () {
     menu.addClass("active");
   });
-  menuBtn.on("click", function () {
-    if ($(this).hasClass("active")) {
-      $(this).removeClass("active");
-      menu.slideUp();
-    } else {
-      $(this).addClass("active");
-      menu.slideDown();
+
+  $(document).mouseup(function (e) {
+    if (!menu.is(e.target) && menu.has(e.target).length === 0) {
+      menu.removeClass("active");
     }
   });
-
-  $(document).click(function (e) {
-    if (
-      !menuBtn.is(e.target) &&
-      !menu.is(e.target) &&
-      menu.has(e.target).length === 0
-    ) {
-      menu.slideUp();
-      menuBtn.removeClass("active");
-    }
-  });
-
-  // zoom
-  jQuery(".card__product-img").zoom({});
 
   // tabs
 

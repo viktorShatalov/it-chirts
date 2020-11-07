@@ -316,3 +316,28 @@ li.tablinks span {
     background: rgb(255, 130, 63);
   }
 }
+#chekout {
+  #header {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  .main__content {
+    padding: 0;
+  }
+  .aside__logo {
+    margin-bottom: 0;
+    margin-right: 30px;
+    path {
+      fill: rgb(0, 0, 0);
+      &:nth-child(4),
+      &:nth-child(1),
+      &:nth-child(11) {
+        fill:rgb(231, 73, 40);
+      }
+    }
+  }
+  #cart {
+    min-width: 120px;
+  }
+}

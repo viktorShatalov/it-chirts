@@ -1024,6 +1024,33 @@ li.tablinks span::before {
   background: #ff823f;
 }
 
+#chekout #header {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+#chekout .main__content {
+  padding: 0;
+}
+
+#chekout .aside__logo {
+  margin-bottom: 0;
+  margin-right: 30px;
+}
+
+#chekout .aside__logo path {
+  fill: black;
+}
+
+#chekout .aside__logo path:nth-child(4), #chekout .aside__logo path:nth-child(1), #chekout .aside__logo path:nth-child(11) {
+  fill: #e74928;
+}
+
+#chekout #cart {
+  min-width: 120px;
+}
+
 #main__wrapper {
   width: 100%;
 }
@@ -1364,6 +1391,19 @@ li.tablinks span::before {
   bottom: 0px;
 }
 
+#chekout #main .container {
+  padding-top: 30px;
+}
+
+#chekout .chekout__content {
+  background: white;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(5, 5, 5, 0.05);
+          box-shadow: 0px 2px 4px 0px rgba(5, 5, 5, 0.05);
+  margin-bottom: 2em;
+  padding: 28px 40px 40px 30px;
+  width: 100%;
+}
+
 #aside__wrap {
   width: 260px;
   min-width: 260px;
@@ -1414,7 +1454,8 @@ li.tablinks span::before {
   margin-bottom: 50px;
 }
 
-.search-form {
+.search-form,
+.dgwt-wcas-search-wrapp {
   display: block;
   position: relative;
   background: transparent;
@@ -1426,44 +1467,71 @@ li.tablinks span::before {
   right: 0px;
   top: 7px;
   width: 100%;
+  min-width: 200px;
+}
+
+.search-form::after,
+.dgwt-wcas-search-wrapp::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(../img/search.svg) center center/16px no-repeat;
+  cursor: pointer;
 }
 
 input[type="search"],
 input[type="s"] {
-  font-size: 13px;
+  padding: 0 !important;
+  font-size: 13px !important;
   font-weight: bold;
-  font-family: inherit;
-  color: white;
+  font-family: inherit !important;
+  color: white !important;
   outline: none;
-  border: none;
+  border: none !important;
   display: block;
-  height: 20px;
-  line-height: 20px;
-  background-color: transparent;
+  height: 20px !important;
+  line-height: 20px !important;
+  background-color: transparent !important;
 }
 
 input[type="search"]::-webkit-input-placeholder,
 input[type="s"]::-webkit-input-placeholder {
-  color: white;
-  font-weight: normal;
+  color: white !important;
+  opacity: 1 !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font: normal 16px/24px "PT Sans", sans-serif !important;
 }
 
 input[type="search"]:-ms-input-placeholder,
 input[type="s"]:-ms-input-placeholder {
-  color: white;
-  font-weight: normal;
+  color: white !important;
+  opacity: 1 !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font: normal 16px/24px "PT Sans", sans-serif !important;
 }
 
 input[type="search"]::-ms-input-placeholder,
 input[type="s"]::-ms-input-placeholder {
-  color: white;
-  font-weight: normal;
+  color: white !important;
+  opacity: 1 !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font: normal 16px/24px "PT Sans", sans-serif !important;
 }
 
 input[type="search"]::placeholder,
 input[type="s"]::placeholder {
-  color: white;
-  font-weight: normal;
+  color: white !important;
+  opacity: 1 !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font: normal 16px/24px "PT Sans", sans-serif !important;
 }
 
 .search-submit {
@@ -1477,15 +1545,6 @@ input[type="s"]::placeholder {
   height: 20px;
   line-height: 20px;
   padding: 0px;
-  cursor: pointer;
-}
-
-.search-submit::before {
-  content: "";
-  display: block;
-  width: 16px;
-  height: 16px;
-  background: url(../img/search.svg) center center/16px no-repeat;
 }
 
 .aside__category-shop-title {
@@ -1730,7 +1789,6 @@ input[type="s"]::placeholder {
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
@@ -1752,6 +1810,20 @@ input[type="s"]::placeholder {
   font-size: 13px;
   height: 34px;
   padding-top: 5px;
+}
+
+.dgwt-wcas-no-submit .dgwt-wcas-ico-magnifier {
+  display: none;
+}
+
+.dgwt-wcas-close:not(.dgwt-wcas-inner-preloader) {
+  background: #282828;
+  opacity: 1;
+}
+
+.dgwt-wcas-search-wrapp svg {
+  position: relative;
+  right: -12px;
 }
 
 .product__card {
@@ -1789,14 +1861,13 @@ input[type="s"]::placeholder {
 .product__card__img-sliders {
   width: 421px;
   position: relative;
-  height: 100%;
 }
 
 .slider-nav__box {
   position: absolute;
-  width: 100%;
-  height: 50px;
   bottom: 20px;
+  width: 100%;
+  left: -50px;
 }
 
 .slider-for {
