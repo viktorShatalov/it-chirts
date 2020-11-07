@@ -111,9 +111,10 @@ jQuery(document).ready(function ($) {
     draggable: false,
     variableWidth: true,
     centerMode: true,
-    infinite: false,
+    infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
+    centerPadding: "0px",
     responsive: [
       {
         breakpoint: 480,
@@ -148,9 +149,31 @@ jQuery(document).ready(function ($) {
   });
 
   //table size
+  const menu = jQuery(".table__size-pseudo");
+  const menuBtn = jQuery(".table__size");
 
-  jQuery(".table__size").on("click", function () {
-    jQuery(".table__size-pseudo").toggleClass("active");
+  menuBtn.on("click", function () {
+    menu.addClass("active");
+  });
+  menuBtn.on("click", function () {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+      menu.slideUp();
+    } else {
+      $(this).addClass("active");
+      menu.slideDown();
+    }
+  });
+
+  $(document).click(function (e) {
+    if (
+      !menuBtn.is(e.target) &&
+      !menu.is(e.target) &&
+      menu.has(e.target).length === 0
+    ) {
+      menu.slideUp();
+      menuBtn.removeClass("active");
+    }
   });
 
   // zoom

@@ -160,6 +160,9 @@ input[type="s"] {
             width: 100%;
           }
         }
+        &[aria-current="page"] {
+          color: rgb(230, 75, 40);
+        }
       }
     }
   }
