@@ -1,0 +1,148 @@
+// chekout
+.checkout__form {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+  color: #363636;
+  font-weight: bold;
+  font-family: "PT Sans", sans-serif;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px !important;
+  label {
+    padding: 12px 0;
+    display: inline-block;
+    width: 100%;
+    max-width: 124px;
+    font-weight: normal;
+    &[for="order_comments"] {
+      .optional {
+        display: none;
+      }
+    }
+  }
+  .woocommerce-input-wrapper {
+    display: inline-block;
+    max-width: 352px;
+    width: 100%;
+  }
+  .select2-container .select2-selection--single,
+  input,
+  textarea {
+    display: inline-block;
+    padding: 12px 10px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid rgb(222, 222, 222);
+    background: rgb(255, 255, 255);
+    width: 100%;
+    &::placeholder {
+      font-family: inherit;
+      font-weight: normal;
+    }
+  }
+  .select2-container .select2-selection--single {
+    height: auto;
+    padding: 6px 10px;
+  }
+  .select2-dropdown {
+    border: 1px solid rgb(222, 222, 222);
+  }
+  textarea {
+    height: 100px !important;
+    resize: none;
+  }
+  &.phone {
+    label {
+      position: relative;
+      &::after {
+        content: "+";
+        float: right;
+        font-weight: bold;
+        font-size: 120%;
+      }
+    }
+  }
+}
+.select2-container--open .select2-dropdown {
+  top: -5px;
+  border: 1px solid rgb(222, 222, 222);
+  border-top: 0px solid rgb(222, 222, 222);
+  color: #363636;
+  font-weight: bold;
+  font-family: "PT Sans", sans-serif;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  top: 8px;
+}
+.select2-search--dropdown,
+.select2-search {
+  display: none !important;
+}
+
+#order_comments_field {
+  flex-direction: column;
+  label {
+    max-width: 100%;
+  }
+  .woocommerce-input-wrapper {
+    max-width: 100%;
+  }
+}
+#checkout {
+  h3 {
+    color: rgb(158, 158, 158);
+    font-size: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: "Bebas Neue", sans-serif;
+    margin: 10px 0 30px;
+  }
+  #header {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  .main__content {
+    padding: 0;
+  }
+  .aside__logo {
+    margin-bottom: 0;
+    margin-right: 30px;
+    path {
+      fill: rgb(0, 0, 0);
+      &:nth-child(4),
+      &:nth-child(1),
+      &:nth-child(11) {
+        fill: rgb(231, 73, 40);
+      }
+    }
+  }
+  #cart {
+    min-width: 120px;
+  }
+  #main {
+    .container {
+      padding-top: 30px;
+    }
+  }
+  .checkout__content {
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 2px 4px 0px rgba(5, 5, 5, 0.05);
+    margin-bottom: 2em;
+    padding: 28px 40px 40px 30px;
+    width: 100%;
+  }
+  .woocommerce form .form-row.woocommerce-validated .select2-container,
+  .woocommerce form .form-row.woocommerce-validated input.input-text,
+  .woocommerce form .form-row.woocommerce-validated select {
+    border-color: rgb(222, 222, 222);
+  }
+}
+.woocommerce form .form-row .required {
+  color: #363636;
+}
