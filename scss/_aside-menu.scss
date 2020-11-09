@@ -187,6 +187,11 @@ input[type="s"] {
     top: 20px;
     transition: all 0.3s ease-in-out;
   }
+  &:first-child {
+    &::after {
+      content: none;
+    }
+  }
 }
 .aside__bottom-menu {
   padding: 15px 30px;

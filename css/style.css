@@ -1613,6 +1613,10 @@ input[type="s"]::placeholder {
   transition: all 0.3s ease-in-out;
 }
 
+.aside__category-shop-title:first-child::after {
+  content: none;
+}
+
 .aside__bottom-menu {
   padding: 15px 30px;
 }
@@ -2310,6 +2314,10 @@ input[type="s"]::placeholder {
 
 #ivpa-content .ivpa-info-box {
   display: none !important;
+}
+
+.added_to_cart.button.wc-forward {
+  display: none;
 }
 
 .checkout__form {

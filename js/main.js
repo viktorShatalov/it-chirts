@@ -111,8 +111,8 @@ jQuery(document).ready(function ($) {
     draggable: false,
     variableWidth: true,
     infinite: true,
-    slidesToShow: 6,
-    slidesToScroll: 6,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     centerPadding: "0px",
     responsive: [
       {
@@ -138,7 +138,9 @@ jQuery(document).ready(function ($) {
 
   //category menu accerdeon
 
-  jQuery(".aside__category-shop-title>a").click(function (e) {
+  jQuery(
+    ".aside__category-shop-title>a:not(.aside__category-shop-title>a:eq(0))"
+  ).click(function (e) {
     e.preventDefault();
   });
 

@@ -1,34 +1,42 @@
 "use strict";
 const { useState, useEffect } = React;
 
-const LikeButton = () => {
-  return (
-    <React.Fragment>
-      <Item />
-      <Item />
-      <Footer />
-    </React.Fragment>
-  );
-};
+const ContentItem = () => {
+  const url = "https://it-shirts.div-head-1.h1n.ru";
+  const [count, setCount] = useState(1);
+  const [price, setPrice] = useState(439);
+  let priceTotal = count * price;
 
-const Item = () => {
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
   // получаем всё
   useEffect(() => {
-    fetch(`https://it-shirts.div-head-1.h1n.ru/wp-json/${"wc/v3/customers/"}`)
+    fetch(`${url}/wp-json/wp/v2/`)
       .then((res) => res.json())
       .then(
         (res) => {
           console.log(res);
         },
         (error) => {
-          setIsLoaded(true);
-          setError(error);
+          console.log(error);
         }
       );
   }, []);
 
+  return (
+    <React.Fragment>
+      <Item
+        price={price}
+        setCount={setCount}
+        count={count}
+        priceTotal={priceTotal}
+      />
+      <Footer priceTotal={priceTotal} />
+    </React.Fragment>
+  );
+};
+
+const Item = (props) => {
+  let setCount = props.setCount;
+  let count = props.count;
   return (
     <React.Fragment>
       <div className="cart__item">
@@ -36,7 +44,9 @@ const Item = () => {
           <a href="" className="cart__item-icon"></a>
         </div>
         <div className="cart__item-img">
-          <a href="ptoduct__link">{/* <img src="img/img1.jpg" alt=""> */}</a>
+          <a href="ptoduct__link">
+            <img src="img/img1.jpg" alt="" />
+          </a>
         </div>
         <div className="cart__item-title">
           <a href="">
@@ -47,22 +57,40 @@ const Item = () => {
             <span className="cart__item-atribute__variation">Цвет: Белая</span>
             <span className="cart__item-atribute__variation">Размер: M</span>
           </span>
-          <span className=" cart__item-title__price">439 грн.</span>
+          <span className=" cart__item-title__price">{props.price} грн.</span>
         </div>
         <div className="cart__item-count">
-          <a className="count__minus" href=""></a>
-          <input className="count__number" type="text" defaultValue="1" />
-          <a className="count__plus" href=""></a>
+          <a
+            className="count__minus"
+            href=""
+            onClick={(e) => {
+              e.preventDefault();
+              if (count <= 1) {
+                setCount(count);
+              } else {
+                setCount(count - 1);
+              }
+            }}
+          ></a>
+          <span className="count__number">{count}</span>
+          <a
+            href=""
+            className="count__plus"
+            onClick={(e) => {
+              e.preventDefault();
+              setCount(count + 1);
+            }}
+          ></a>
         </div>
         <div className="cart__item-price">
-          <span>439 грн.</span>
+          <span>{props.priceTotal} грн.</span>
         </div>
       </div>
     </React.Fragment>
   );
 };
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <React.Fragment>
       <div className="modal__footer">
@@ -72,8 +100,8 @@ const Footer = () => {
         <span className="modal__footer-tottal">
           Итого:
           <span className="woocommerce-Price-amount amount">
-            87811
-            <span className="woocommerce-Price-currencySymbol">грн.</span>
+            {props.priceTotal}
+            <span className="woocommerce-Price-currencySymbol"> грн.</span>
           </span>
         </span>
         <a className="modal__footer-checkout" href="/checkout/">
@@ -87,7 +115,7 @@ const Footer = () => {
 const domContainer = document.querySelector("#root");
 ReactDOM.render(
   <React.Fragment>
-    <LikeButton />
+    <ContentItem />
   </React.Fragment>,
   domContainer
 );
