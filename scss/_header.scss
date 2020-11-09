@@ -104,22 +104,14 @@ li.tablinks span {
   text-align: center;
 }
 .cart__item {
+  padding: 20px;
   position: relative;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
   padding-bottom: 20px;
-  margin-bottom: 20px;
   border-bottom: 1px solid rgb(233, 233, 233);
-  &:last-child {
-    margin-bottom: 0px;
-    border-bottom: 0;
-    padding-bottom: 0;
-    .cart__item-price {
-      bottom: -7px;
-    }
-  }
 }
 .cart__item-del {
   .cart__item-icon {
@@ -186,7 +178,7 @@ li.tablinks span {
   text-align: center;
   width: 110px;
   display: flex;
-  bottom: -30px;
+  bottom: -23px;
   right: 32px;
 }
 .count__number {
@@ -245,8 +237,8 @@ li.tablinks span {
 }
 .cart__item-price {
   position: absolute;
-  right: 0;
-  bottom: 13px;
+  right: 20px;
+  bottom: 20px;
   span {
     max-width: 110px;
     width: 110px;
@@ -267,7 +259,6 @@ li.tablinks span {
   align-items: center;
   padding: 20px;
   background: #fff8e5;
-  border-top: 1px solid #fde4d9;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }

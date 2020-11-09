@@ -14,81 +14,28 @@
 
 <body>
   <!-- modal -->
-  <div class="modal" id="modal">
+  <div class="modal active" id="modal">
     <div class="modal__body">
       <div class="modal__header">
         <span class="modal__header-title">Корзина</span>
         <div data-close-button class="close-button"></div>
       </div>
       <div class="modal__content">
-        <div class="cart__empty"></div>
-        <strong>Ваша корзина пуста</strong>
-        <p>Чтобы это исправить выберите и купите понравившуюся футболку.</p>
-        <div class="cart__item">
-          <div class="cart__item-del">
-            <a href="" class="cart__item-icon"></a>
-          </div>
-          <div class="cart__item-img">
-            <a href="ptoduct__link">
-              <img src="img/img1.jpg" alt="">
-            </a>
-          </div>
-          <div class="cart__item-title">
-            <a href="">Футболка «Развиваю инстинкт автосохранения» для тех, кому дороги нервы</a>
-            <span class="cart__item-atribute"><span class="cart__item-atribute__variation">Цвет: Белая</span><span
-                class="cart__item-atribute__variation">Размер: M</span></span>
-            <span class=" cart__item-title__price">439 грн.</span>
-          </div>
-          <div class="cart__item-count">
-            <a class="count__minus" href=""></a>
-            <input class="count__number" type="text" value="1">
-            <a class="count__plus" href=""></a>
-          </div>
-          <div class="cart__item-price">
-            <span>439 грн.</span>
-          </div>
-        </div>
-        <div class="cart__item">
-          <div class="cart__item-del">
-            <a href="" class="cart__item-icon"></a>
-          </div>
-          <div class="cart__item-img">
-            <a href="ptoduct__link">
-              <img src="img/img1.jpg" alt="">
-            </a>
-          </div>
-          <div class="cart__item-title">
-            <a href="">Футболка «Развиваю инстинкт автосохранения» для тех, кому дороги нервы</a>
-            <span class="cart__item-atribute"><span class="cart__item-atribute__variation">Цвет: Белая</span><span
-                class="cart__item-atribute__variation">Размер: M</span></span>
-            <span class=" cart__item-title__price">439 грн.</span>
-          </div>
-          <div class="cart__item-count">
-            <a class="count__minus" href=""></a>
-            <input class="count__number" type="text" value="1">
-            <a class="count__plus" href=""></a>
-          </div>
-          <div class="cart__item-price">
-            <span>439 грн.</span>
-          </div>
+
+        <!-- react component -->
+        <div id="root"></div>
+
+        <!-- cart empty -->
+
+        <!-- <div class="is-cart__empty">
+          <div class="cart__empty"></div>
+          <strong>Ваша корзина пуста</strong>
+          <p>Чтобы это исправить выберите и купите понравившуюся футболку.</p>
         </div> -->
       </div>
-      <!-- <div class="modal__footer">
-        <a class="bac__to__shop" href="/">Продолжить покупки</a>
-        <span class="modal__footer-tottal">
-          Итого:
-          <span class="woocommerce-Price-amount amount">
-            87811
-            <span class="woocommerce-Price-currencySymbol">
-              грн.
-            </span>
-          </span>
-        </span>
-        <a class="modal__footer-checkout" href="/checkout/">Оформить заказ</a>
-      </div> -->
     </div>
   </div>
-  <div id="overlay"></div>
+  <div id="overlay" class="active"></div>
   <!-- preloader -->
   <div class="loader-wrap">
     <div class="logo">
@@ -556,9 +503,21 @@
     </div>
   </div>
 
+  <!-- react -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin>
+  </script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <!-- components -->
+  <script type="text/babel" src="component/cart_popup.jsx"></script>
+  <!-- end components -->
+  <!-- end react -->
+
   <script src="js/jquery/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/main.js"></script>
+
+
 </body>
 
 </html>
