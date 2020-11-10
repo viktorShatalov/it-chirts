@@ -238,8 +238,8 @@ li.tablinks span {
 .cart__item-price {
   position: absolute;
   right: 20px;
-  bottom: 20px;
-  span {
+  bottom: 17px;
+  .woocommerce-Price-amount {
     max-width: 110px;
     width: 110px;
     height: 30px;
@@ -250,6 +250,13 @@ li.tablinks span {
     font-weight: 700;
     font-family: inherit;
     display: inline-block;
+    padding: 2px 0 0;
+    .woocommerce-Price-currencySymbol {
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      color: rgb(50, 28, 25) !important;
+      text-transform: initial !important;
+    }
   }
 }
 .modal__footer {

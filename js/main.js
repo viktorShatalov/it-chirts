@@ -84,6 +84,23 @@ jQuery(document).ready(function ($) {
   modal();
 
   // sliders
+  jQuery(".first__slider,.second__slider").slick({
+    arrows: false,
+    dots: false,
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
 
   jQuery(".slider-for").slick({
     arrows: false,

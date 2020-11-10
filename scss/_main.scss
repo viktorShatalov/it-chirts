@@ -75,7 +75,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px 20px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 .product__item {
   background: rgb(255, 255, 255);
@@ -184,6 +184,44 @@
 .last__item {
   position: relative;
 }
+.home__heading {
+  display: flex;
+  justify-content: space-between;
+}
+.home {
+  h1,
+  h2 {
+    margin: 0 0 20px;
+    display: inline-block;
+    color: rgb(195, 195, 195);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 30px !important;
+  }
+  .main__content-description {
+    h2{
+      margin-bottom: 35px !important;
+    }
+    p {
+      color: rgb(50, 28, 25) !important;
+    }
+  }
+}
+.show__more-link {
+  display: inline-block;
+  position: relative;
+  color: rgb(230, 73, 39);
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 5px;
+  &::after {
+    content: url(../img/arrow__show-more.png);
+    margin-left: 10px;
+  }
+}
 .show__more {
   display: inline-block;
   position: absolute;
@@ -271,4 +309,18 @@
     }
   }
 }
-
+.first__slider,
+.second__slider {
+  margin-bottom: 35px;
+}
+.second__slider-img,
+.first__slider-img {
+  width: 300px;
+  height: 100%;
+  &[data-slick-index="1"] {
+    margin: 0 30px;
+  }
+  img {
+    object-fit: cover;
+  }
+}
