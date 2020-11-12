@@ -22,6 +22,21 @@ body {
   width: 100%;
   height: 100%;
 }
+blockquote {
+  padding: 0 30px;
+  color: #9e9e9e;
+  font-style: italic;
+  padding-left: 70px !important;
+  position: relative;
+  &::before {
+    color: #e64927;
+    content: "\201C";
+    font-size: 40px;
+    position: absolute;
+    left: 48px;
+    top: 12px;
+  }
+}
 ::selection {
   background: #e64927;
   color: #fff;
@@ -69,6 +84,13 @@ ol {
   li {
     list-style: none;
   }
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
 }
 .wp-content p,
 .wp-content ul:not(.page-numbers),

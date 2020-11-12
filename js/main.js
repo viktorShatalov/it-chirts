@@ -206,4 +206,21 @@ jQuery(document).ready(function ($) {
     };
   };
   tab();
+  // сертификат в оформлении заказа
+  jQuery(".woocommerce-additional-fields").prepend(jQuery("#payment"));
+  jQuery("#pwgc-redeem-gift-card-form").appendTo(jQuery("#cupon__box"));
+  jQuery("#pwgc-redeem-button").val("Подтвердить");
+  jQuery("#pwgc-redeem-gift-card-number").val("Сертификат");
+
+  $("#link-cert").click(function (e) {
+    e.preventDefault();
+    $("#pwgc-redeem-gift-card-form").slideToggle("fast");
+    $("form.checkout_coupon").slideUp("fast");
+    return false;
+  });
+  $(".showcoupon").click(function () {
+    $("#pwgc-redeem-gift-card-form").slideUp("fast");
+  });
+
+  // доставка
 });

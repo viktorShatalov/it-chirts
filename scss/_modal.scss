@@ -1,7 +1,7 @@
 // modal
 .modal {
   position: fixed;
-  top: 70px;
+  top: 40px;
   left: 50%;
   transform: translate(-50%, 0);
   width: 100%;
@@ -16,6 +16,19 @@
   &.active {
     opacity: 1;
     visibility: visible;
+  }
+}
+#contacts__modal-form {
+  width: 445px;
+  border-radius: 6px;
+  top: 5px;
+  padding: 10px 0 0;
+  .close-button {
+    color: #e5e5e5;
+  }
+  .modal__header-title {
+    text-transform: inherit;
+    padding: 15px 10px;
   }
 }
 .modal__header {
@@ -63,7 +76,6 @@
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
-    speak: none;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
   }

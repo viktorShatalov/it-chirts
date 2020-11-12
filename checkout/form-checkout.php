@@ -19,6 +19,7 @@
 if (!defined('ABSPATH')) {
 	exit;
 }
+remove_action('woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form');
 
 do_action('woocommerce_before_checkout_form', $checkout);
 
@@ -58,9 +59,37 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
 
 	<div id="order_review" class="woocommerce-checkout-review-order">
 		<?php do_action('woocommerce_checkout_order_review'); ?>
+		<div id="footer__table">
+			<div class="form-row place-order">
+                <button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order"
+                        value="Заказ подтверждаю" data-value="Заказ подтверждаю">Заказ подтверждаю</button>
+				<noscript>
+					<?php
+					/* translators: $1 and $2 opening and closing emphasis tags respectively */
+					printf(esc_html__('Since your browser does not support JavaScript, or it is disabled, please ensure you click the %1$sUpdate Totals%2$s button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'woocommerce'), '<em>', '</em>');
+					?>
+					<br />
+
+				</noscript>
+
+				<?php wc_get_template('checkout/terms.php'); ?>
+
+				<?php do_action('woocommerce_review_order_before_submit'); ?>
+
+
+
+				<?php do_action('woocommerce_review_order_after_submit'); ?>
+
+				<?php wp_nonce_field('woocommerce-process_checkout', 'woocommerce-process-checkout-nonce'); ?>
+				<?php
+				add_action('woocommerce_checkout_after_order_review', 'woocommerce_checkout_coupon_form', 20);
+				do_action('woocommerce_checkout_after_order_review'); ?>
+
+			</div>
+		</div>
 	</div>
 
-	<?php do_action('woocommerce_checkout_after_order_review'); ?>
+
 
 </form>
 

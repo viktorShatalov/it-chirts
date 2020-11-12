@@ -58,6 +58,8 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php endif; ?>
 
+
+
 		<div class="woocommerce-additional-fields__field-wrapper">
 			<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) : ?>
 				<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
@@ -67,4 +69,5 @@ defined( 'ABSPATH' ) || exit;
 	<?php endif; ?>
 
 	<?php do_action( 'woocommerce_after_order_notes', $checkout ); ?>
+
 </div>
