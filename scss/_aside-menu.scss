@@ -221,6 +221,9 @@ input[type="s"] {
         color: #bababa;
         text-decoration: none;
         font-size: 14px;
+        &[aria-current="page"] {
+          color: rgb(230, 75, 40);
+        }
       }
     }
   }

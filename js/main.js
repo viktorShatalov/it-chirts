@@ -221,10 +221,4 @@ jQuery(document).ready(function ($) {
   $(".showcoupon").click(function () {
     $("#pwgc-redeem-gift-card-form").slideUp("fast");
   });
-
-  //masonry
-  $(".grid").masonry({
-    itemSelector: ".grid-item",
-    columnWidth: 30,
-  });
 });
