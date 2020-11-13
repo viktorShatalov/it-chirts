@@ -222,12 +222,9 @@ jQuery(document).ready(function ($) {
     $("#pwgc-redeem-gift-card-form").slideUp("fast");
   });
 
-  jQuery("body").on(
-    "click change",
-    "#billing_country option",
-    function () {
-      jQuery(".woocs-style-2-link").trigger("click");
-      // alert("123");
-    }
-  );
+  //masonry
+  $(".grid").masonry({
+    itemSelector: ".grid-item",
+    columnWidth: 30,
+  });
 });

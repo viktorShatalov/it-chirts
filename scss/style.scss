@@ -16,9 +16,6 @@
 // main
 @import "_aside-menu.scss";
 
-// category-page
-@import "_category-page.scss";
-
 // card__product
 @import "_card__product.scss";
 
@@ -26,13 +23,16 @@
 @import "_contacts.scss";
 
 // cart
-@import "_cart.scss";
+@import "_blog.scss";
 
 // footer
 @import "_footer.scss";
 
 // modal
 @import "_modal";
+
+// modal
+@import "_reviews";
 
 // woocomerce-settinge-style
 @import "_woocomerce.scss";

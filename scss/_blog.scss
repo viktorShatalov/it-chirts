@@ -1,0 +1,116 @@
+#blog {
+  .container {
+    max-width: 800px;
+  }
+  #header {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  #main {
+    padding-bottom: 120px;
+    & > .container {
+      padding-top: 0;
+    }
+  }
+  .aside__logo {
+    position: relative;
+    &::after {
+      content: "блог";
+      position: absolute;
+      text-transform: uppercase;
+      background: rgb(231, 73, 40);
+      color: white;
+      border-radius: 3px;
+      padding: 2px 2px 1px;
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 1;
+      top: 3px;
+      right: -35px;
+    }
+  }
+  &.blog__single__item {
+    #breadcumbs {
+      display: flex;
+      align-items: baseline;
+      .container {
+        margin: 0;
+      }
+    }
+
+    .back__to__blog {
+      color: #e74928;
+      border: 1px solid #e74928;
+      border-radius: 3px;
+      line-height: 14px;
+      padding: 5px 10px 7px 10px;
+      vertical-align: middle;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+.back__to__shop {
+  font-size: 13px;
+  height: 30px;
+  line-height: 30px;
+  text-decoration: none;
+  color: rgb(231, 73, 40);
+}
+.blog__content-item {
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(5, 5, 5, 0.05) 0px 2px 4px 0px;
+  display: block;
+  margin-bottom: 1.1em;
+  padding: 20px;
+  width: 100%;
+  min-height: 152px;
+  h3 {
+    color: rgb(50, 28, 25) !important;
+    font-family: "PT Sans", sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+    margin: 0px 0px 20px !important;
+    text-transform: none !important;
+  }
+  p {
+    line-height: 1;
+    text-align: justify;
+    a {
+      color: rgb(231, 73, 40);
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.blog__content-item_img {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  height: 112px;
+  float: left;
+  margin: 0px 20px 0 0px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.blog__single__item {
+  .page-content-image {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .content {
+    margin-bottom: 0;
+  }
+}

@@ -127,56 +127,7 @@ form[name="checkout"] {
     line-height: 1;
   }
 }
-#checkout {
-  h3 {
-    color: rgb(158, 158, 158);
-    font-size: 24px;
-    font-weight: normal;
-    text-transform: uppercase;
-    font-family: "Bebas Neue", sans-serif;
-    margin: 10px 0 30px;
-  }
-  #header {
-    position: relative;
-    left: 0;
-    top: 0;
-  }
-  .main__content {
-    padding: 0;
-  }
-  .aside__logo {
-    margin-bottom: 0;
-    margin-right: 30px;
-    path {
-      fill: rgb(0, 0, 0);
-      &:nth-child(4),
-      &:nth-child(1),
-      &:nth-child(11) {
-        fill: rgb(231, 73, 40);
-      }
-    }
-  }
-  #cart {
-    min-width: 120px;
-  }
-  #main {
-    .container {
-      padding-top: 30px;
-    }
-  }
-  .checkout__content {
-    background: rgb(255, 255, 255);
-    box-shadow: 0px 2px 4px 0px rgba(5, 5, 5, 0.05);
-    margin-bottom: 2em;
-    padding: 28px 40px 40px 30px;
-    width: 100%;
-  }
-  .woocommerce form .form-row.woocommerce-validated .select2-container,
-  .woocommerce form .form-row.woocommerce-validated input.input-text,
-  .woocommerce form .form-row.woocommerce-validated select {
-    border-color: rgb(222, 222, 222);
-  }
-}
+
 .woocommerce form .form-row .required {
   color: rgb(54, 54, 54);
 }
