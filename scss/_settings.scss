@@ -23,6 +23,7 @@ body {
   height: 100%;
 }
 blockquote {
+  margin: 1em 40px;
   padding: 0 30px;
   color: #9e9e9e;
   font-style: italic;
@@ -36,6 +37,13 @@ blockquote {
     left: 48px;
     top: 12px;
   }
+  p {
+    padding: 0 !important;
+  }
+}
+.page-content-image {
+  margin-bottom: 1em;
+  padding: 0px;
 }
 ::selection {
   background: #e64927;
@@ -119,7 +127,6 @@ textarea {
 }
 
 address,
-blockquote,
 dl,
 fieldset,
 figure,
@@ -249,15 +256,12 @@ textarea {
 // contact-form7
 
 .wpcf7-form-control-wrap {
-  width: 100%;
-  max-width: 260px;
-  text-align: center;
   margin: 0 auto;
 }
 .wpcf7-not-valid-tip {
   position: absolute;
   left: 0;
-  bottom: -12px;
+  bottom: -37px;
   width: 100%;
   text-align: right;
 }

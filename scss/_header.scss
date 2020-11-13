@@ -179,7 +179,7 @@ li.tablinks span,
   text-align: center;
   width: 110px;
   display: flex;
-  bottom: -23px;
+  bottom: -30px;
   right: 32px;
 }
 .count__number {
@@ -314,4 +314,7 @@ li.tablinks span,
     transform: translateY(-2px);
     background: rgb(255, 130, 63);
   }
+}
+.is-cart__empty {
+  padding: 20px;
 }

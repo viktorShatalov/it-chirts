@@ -52,6 +52,17 @@ defined('ABSPATH') || exit;
         <tr class="cart-subtotal">
             <td><?php esc_html_e('Итого:', 'woocommerce'); ?><?php wc_cart_totals_subtotal_html(); ?></td>
         </tr>
+        <tr id="shipping__pseudo">
+            <?php if (WC()->cart->needs_shipping() && WC()->cart->show_shipping()) : ?>
+
+                <?php do_action('woocommerce_review_order_before_shipping'); ?>
+
+                <?php wc_cart_totals_shipping_html(); ?>
+
+                <?php do_action('woocommerce_review_order_after_shipping'); ?>
+
+            <?php endif; ?>
+        </tr>
 
         <?php foreach (WC()->cart->get_coupons() as $code => $coupon) : ?>
             <tr class="cart-discount coupon-<?php echo esc_attr(sanitize_title($code)); ?>">

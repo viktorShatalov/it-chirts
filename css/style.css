@@ -24,6 +24,7 @@ body {
 }
 
 blockquote {
+  margin: 1em 40px;
   padding: 0 30px;
   color: #9e9e9e;
   font-style: italic;
@@ -38,6 +39,15 @@ blockquote::before {
   position: absolute;
   left: 48px;
   top: 12px;
+}
+
+blockquote p {
+  padding: 0 !important;
+}
+
+.page-content-image {
+  margin-bottom: 1em;
+  padding: 0px;
 }
 
 ::-moz-selection {
@@ -147,7 +157,6 @@ textarea {
 }
 
 address,
-blockquote,
 dl,
 fieldset,
 figure,
@@ -297,16 +306,13 @@ textarea {
 }
 
 .wpcf7-form-control-wrap {
-  width: 100%;
-  max-width: 260px;
-  text-align: center;
   margin: 0 auto;
 }
 
 .wpcf7-not-valid-tip {
   position: absolute;
   left: 0;
-  bottom: -12px;
+  bottom: -37px;
   width: 100%;
   text-align: right;
 }
@@ -883,7 +889,7 @@ li.tablinks span::before,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  bottom: -23px;
+  bottom: -30px;
   right: 32px;
 }
 
@@ -1045,6 +1051,10 @@ li.tablinks span::before,
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
   background: #ff823f;
+}
+
+.is-cart__empty {
+  padding: 20px;
 }
 
 #main__wrapper {
@@ -1743,13 +1753,13 @@ li.tablinks span::before,
   background: #ff823f;
 }
 
-.modal__content form p {
+.modal__content-contacts form p {
   margin: 10px 0 0;
   padding: 0 30px;
 }
 
-.modal__content form label {
-  display: block;
+.modal__content-contacts form label {
+  display: inline-block;
   line-height: 1;
   padding: 20px 0 5px;
   width: 100%;
@@ -1757,7 +1767,7 @@ li.tablinks span::before,
   font: 16px / 24px "PT Sans", sans-serif;
 }
 
-.modal__content form .contacts__form-modal {
+.modal__content-contacts form .contacts__form-modal {
   border: 1px solid #dddddd;
   border-radius: 3px;
   padding: 10px 8px;
@@ -1767,20 +1777,20 @@ li.tablinks span::before,
   max-width: 100%;
 }
 
-.modal__content form textarea {
+.modal__content-contacts form textarea {
   resize: none;
   width: 100%;
   height: 173px;
 }
 
-.modal__content form input[type="submit"] {
+.modal__content-contacts form input[type="submit"] {
   cursor: pointer;
   -webkit-box-shadow: rgba(230, 73, 39, 0.21) 0px 6px 10px 0px;
           box-shadow: rgba(230, 73, 39, 0.21) 0px 6px 10px 0px;
   border: none;
   display: block;
   padding: 16px 9px;
-  margin: 15px auto 30px;
+  margin: 15px auto 10px;
   background: -webkit-gradient(linear, left top, right top, from(#e8593a), to(#f37235));
   background: linear-gradient(to right, #e8593a 0%, #f37235 100%);
   border-radius: 2px;
@@ -1792,11 +1802,97 @@ li.tablinks span::before,
   text-align: center;
 }
 
-.modal__content form input[type="submit"]:hover {
+.modal__content-contacts form input[type="submit"]:hover {
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
   color: white;
   background: #ff823f;
+}
+
+.block-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  padding: 0 30px;
+}
+
+.block-actions {
+  margin: -200px 0 30px;
+}
+
+.block-actions__item {
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 29px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 10px 29px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  margin-right: 30px;
+}
+
+.block-actions__item:last-child {
+  margin-right: 0;
+}
+
+.block-actions__item:last-child .block-projects__item-name, .block-actions__item:first-child .block-projects__item-name {
+  font-size: 30px !important;
+}
+
+.block-actions__item img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+}
+
+.block-actions__item-text {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 0 20px 20px 20px;
+}
+
+.block-actions__item-text p {
+  margin: 0;
+  padding: 0;
+}
+
+.block-actions__item-text a {
+  color: #e64927;
+  text-decoration: underline;
+}
+
+.block-actions__item-text a:hover {
+  text-decoration: none;
+}
+
+.block-actions__item-text h4 {
+  color: #321c19;
+  display: block;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0.5em 0 1em;
+  text-transform: none;
+  text-align: center;
+}
+
+.block-projects__item-name {
+  border-top: 1px dashed #d7d7d7;
+  color: #e74928;
+  font-family: "Gilroy";
+  font-weight: 600;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
 }
 
 #aside__wrap {
@@ -1829,7 +1925,7 @@ li.tablinks span::before,
   left: 0;
   bottom: 0;
   background: #282828;
-  overflow: auto;
+  overflow-x: hidden;
   min-height: 100%;
 }
 
@@ -2790,13 +2886,13 @@ input[type="s"]::placeholder {
 
 .modal {
   position: fixed;
-  top: 40px;
+  top: 40%;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 100%;
   max-width: 650px;
-  min-height: 193px;
+  min-height: 187px;
   z-index: 8;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
@@ -2814,7 +2910,7 @@ input[type="s"]::placeholder {
 #contacts__modal-form {
   width: 445px;
   border-radius: 6px;
-  top: 5px;
+  top: 50%;
   padding: 10px 0 0;
 }
 
@@ -2862,16 +2958,19 @@ input[type="s"]::placeholder {
   left: -5%;
 }
 
-.modal__content {
+.modal__content,
+.modal__content-contacts {
   text-align: center;
   font-size: 13px;
 }
 
-.modal__content strong {
+.modal__content strong,
+.modal__content-contacts strong {
   font-family: inherit;
 }
 
-.modal__content p {
+.modal__content p,
+.modal__content-contacts p {
   margin: 10px 0;
 }
 
@@ -3142,18 +3241,36 @@ form[name="checkout"] {
 }
 
 #order_comments_field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-#order_comments_field label {
+#order_comments_field label[for="order_comments"] {
   max-width: 100%;
+  line-height: 1 !important;
+  width: 100% !important;
+  margin: 30px 0 !important;
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  color: #9e9e9e;
+  font-size: 24px;
+  padding: 0;
 }
 
 #order_comments_field .woocommerce-input-wrapper {
   max-width: 100%;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 !important;
+}
+
+#order_comments_field #order_comments {
+  line-height: 1;
 }
 
 #checkout h3 {
@@ -3221,6 +3338,60 @@ label[for="payment_method_liqpay-webplus"] img,
   display: none;
 }
 
+#payment h3 {
+  margin: 30px 0;
+}
+
+ul.payment_methods {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 !important;
+  min-height: 100px;
+  position: relative;
+}
+
+ul.payment_methods label {
+  cursor: pointer;
+  background: #fbfbfb;
+  border: 2px solid #fbfbfb;
+  color: #270e0a;
+  font-size: 14px;
+  line-height: normal;
+  width: auto;
+  margin-right: 2%;
+  padding: 7px;
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+ul.payment_methods input {
+  position: absolute;
+  left: -100%;
+}
+
+ul.payment_methods input:checked + label {
+  border-color: #e64927;
+}
+
+ul.payment_methods .payment_box {
+  position: absolute !important;
+  left: 0;
+  max-width: 485px;
+  padding: 1em 0 !important;
+  background-color: rgba(223, 220, 222, 0) !important;
+  color: #8b8b8b !important;
+  font-size: 14px !important;
+  line-height: 18px !important;
+  margin-bottom: 1em !important;
+  margin: 0 !important;
+}
+
+ul.payment_methods .payment_box::before {
+  content: none !important;
+}
+
 .woocommerce-checkout-review-order-table thead {
   display: none;
 }
@@ -3284,6 +3455,7 @@ tr.order-total td {
       -ms-flex-align: baseline;
           align-items: baseline;
   width: 100%;
+  padding-top: 0 !important;
 }
 
 .order-details tr td:first-child {
@@ -3408,6 +3580,7 @@ tr.order-total td {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  white-space: normal;
 }
 
 #show__modalCart {
@@ -3576,7 +3749,112 @@ form.checkout_coupon #pwgc-redeem-button:hover,
 }
 
 .woocs-style-2-drop-down {
+  background: #282828 !important;
+  border-radius: 0 !important;
+  height: 34px !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  overflow: hidden !important;
+  max-width: 80px !important;
+}
+
+.woocs-style-2-drop-down .woocs-style-2-top,
+.woocs-style-2-drop-down .woocs-style-2-bottom {
+  width: 100% !important;
+  background: black !important;
+  border-radius: 5px !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.woocs-style-2-drop-down .woocs-style-2-name,
+.woocs-style-2-drop-down .woocs-style-2-link,
+.woocs-style-2-drop-down .woocs-style-2-name-large {
+  line-height: 1 !important;
+  margin-left: 0 !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-size: 13px !important;
+  padding: 0 0 0 5px !important;
+}
+
+.woocs-style-2-drop-down .woocs-style-2-link {
+  background-size: 16px 11px !important;
+  background-repeat: no-repeat !important;
+  background-position: 0 0 !important;
+  padding: 0 0 0 21px !important;
+}
+
+.woocs-style-2-drop-down .woocs-style-2-top,
+.woocs-style-2-drop-down .woocs-style-2-bottom {
+  height: 34px !important;
+  padding: 9px 8px !important;
+}
+
+.woocs-style-2-drop-down .woocs-style-2-x {
+  background: #8e8e8e !important;
+}
+
+.woocs-style-2-drop-down .woocs-style-2-x:hover {
+  background: #8e8e8e !important;
+}
+
+.woocs-style-2-drop-down .woocs-style-2-line2 {
+  background: #222222 !important;
+}
+
+.woocs-style-2-drop-down .woocs-style-2-line2:hover {
+  background: #222222 !important;
+}
+
+.woocs-style-2-drop-down .woocs-style-2-avatar-large,
+.woocs-style-2-drop-down .woocs-style-2-avatar {
+  border-radius: 0 !important;
+  height: 11px !important;
+  margin-right: 5px !important;
+  margin-left: 0 !important;
+  position: relative !important;
+  top: 0px !important;
+  width: 16px !important;
+}
+
+.woocs-style-2-drop-down .woocs-style-2-x-touch {
+  right: -12px;
+  top: -10px !important;
+  width: 20px !important;
+  height: 20px !important;
   position: absolute;
+}
+
+.woocs-style-2-drop-down .woocs-style-2-to {
+  -webkit-transform: translateY(-34px) !important;
+          transform: translateY(-34px) !important;
+}
+
+.woocs-style-2-drop-down .woocs-style-2-from-contents {
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
+}
+
+.woocs-style-2-drop-down .woocs-style-2-from {
+  height: 34px !important;
+  padding: 11px 0 !important;
+}
+
+.woocs-style-2-drop-down .woocs-style-2-row {
+  height: 100% !important;
+}
+
+.woocs-style-2-drop-down .woocs-style-2-row:hover {
+  background-color: rgba(242, 242, 242, 0) !important;
+}
+
+.woocs-style-2-drop-down.woocs-style-2-expand {
+  min-height: 100% !important;
+  position: initial !important;
+  width: 80px !important;
 }
 
 #add_payment_method #payment ul.payment_methods,
@@ -3621,6 +3899,10 @@ label[for="shipping_method_0_nova_poshta_shipping1"] {
   display: none !important;
 }
 
+#shipping_method {
+  width: 100%;
+}
+
 .wc-ukr-shipping-checkbox {
   background: #fbfbfb;
   border: 2px solid #fbfbfb;
@@ -3645,6 +3927,10 @@ label[for="shipping_method_0_nova_poshta_shipping1"] {
   font-size: 14px !important;
   height: auto;
   padding: 7px 5px;
+}
+
+#wcus_np_billing_custom_address_field {
+  margin-bottom: 10px !important;
 }
 
 #wcus_np_billing_custom_address_field .woocommerce-input-wrapper {

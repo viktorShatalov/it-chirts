@@ -104,12 +104,27 @@ form[name="checkout"] {
 }
 
 #order_comments_field {
+  display: flex;
   flex-direction: column;
-  label {
+  label[for="order_comments"] {
     max-width: 100%;
+    line-height: 1 !important;
+    width: 100% !important;
+    margin: 30px 0 !important;
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+    color: #9e9e9e;
+    font-size: 24px;
+    padding: 0;
   }
   .woocommerce-input-wrapper {
     max-width: 100%;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+  }
+  #order_comments {
+    line-height: 1;
   }
 }
 #checkout {
@@ -170,6 +185,54 @@ label[for="payment_method_liqpay-webplus"] img,
 .woocommerce-shipping-totals > th {
   display: none;
 }
+#payment {
+  h3 {
+    margin: 30px 0;
+  }
+}
+ul.payment_methods {
+  display: flex;
+  padding: 0 !important;
+  min-height: 100px;
+  position: relative;
+  label {
+    cursor: pointer;
+    background: rgb(251, 251, 251);
+    border: 2px solid rgb(251, 251, 251);
+    color: rgb(39, 14, 10);
+    font-size: 14px;
+    line-height: normal;
+    width: auto;
+    margin-right: 2%;
+    padding: 7px;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  input {
+    position: absolute;
+    left: -100%;
+    &:checked + label {
+      border-color: rgb(230, 73, 39);
+    }
+  }
+  .payment_box {
+    position: absolute !important;
+    left: 0;
+    max-width: 485px;
+    padding: 1em 0 !important;
+    background-color: rgba(223, 220, 222, 0) !important;
+    color: rgb(139, 139, 139) !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    margin-bottom: 1em !important;
+    margin: 0 !important;
+    &::before {
+      content: none !important;
+    }
+  }
+}
+
 .woocommerce-checkout-review-order-table {
   thead {
     display: none;
@@ -221,6 +284,7 @@ tr.order-total {
     justify-content: space-between;
     align-items: baseline;
     width: 100%;
+    padding-top: 0 !important;
   }
 }
 .order-details tr td:first-child {
@@ -323,6 +387,7 @@ tr.order-total {
     padding: 20px;
     display: flex !important;
     flex-direction: row;
+    white-space: normal;
   }
 }
 
@@ -430,10 +495,95 @@ form.checkout_coupon,
     margin-bottom: 10px !important;
   }
 }
+// переключатель валюты
 .woocs-style-2-drop-down {
-  position: absolute;
-  // left: -1000%;
+  background: #282828 !important;
+  border-radius: 0 !important;
+  height: 34px !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  overflow: hidden !important;
+  max-width: 80px !important;
+  .woocs-style-2-top,
+  .woocs-style-2-bottom {
+    width: 100% !important;
+    background: rgb(0, 0, 0) !important;
+    border-radius: 5px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .woocs-style-2-name,
+  .woocs-style-2-link,
+  .woocs-style-2-name-large {
+    line-height: 1 !important;
+    margin-left: 0 !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 13px !important;
+    padding: 0 0 0 5px !important;
+  }
+  .woocs-style-2-link {
+    background-size: 16px 11px !important;
+    background-repeat: no-repeat !important;
+    background-position: 0 0 !important;
+    padding: 0 0 0 21px !important;
+  }
+  .woocs-style-2-top,
+  .woocs-style-2-bottom {
+    height: 34px !important;
+    padding: 9px 8px !important;
+  }
+  .woocs-style-2-x {
+    background: rgb(142, 142, 142) !important;
+    &:hover {
+      background: rgb(142, 142, 142) !important;
+    }
+  }
+  .woocs-style-2-line2 {
+    background: rgb(34, 34, 34) !important;
+    &:hover {
+      background: rgb(34, 34, 34) !important;
+    }
+  }
+  .woocs-style-2-avatar-large,
+  .woocs-style-2-avatar {
+    border-radius: 0 !important;
+    height: 11px !important;
+    margin-right: 5px !important;
+    margin-left: 0 !important;
+    position: relative !important;
+    top: 0px !important;
+    width: 16px !important;
+  }
+  .woocs-style-2-x-touch {
+    right: -12px;
+    top: -10px !important;
+    width: 20px !important;
+    height: 20px !important;
+    position: absolute;
+  }
+  .woocs-style-2-to {
+    transform: translateY(-34px) !important;
+  }
+  .woocs-style-2-from-contents {
+    transform: scale(1) !important;
+  }
+  .woocs-style-2-from {
+    height: 34px !important;
+    padding: 11px 0 !important;
+  }
+  .woocs-style-2-row {
+    height: 100% !important;
+    &:hover {
+      background-color: rgba(242, 242, 242, 0) !important;
+    }
+  }
 }
+.woocs-style-2-drop-down.woocs-style-2-expand {
+  min-height: 100% !important;
+  position: initial !important;
+  width: 80px !important;
+}
+
+// --end-- //
 #add_payment_method #payment ul.payment_methods,
 .woocommerce-cart #payment ul.payment_methods,
 .woocommerce-checkout #payment ul.payment_methods {
@@ -471,6 +621,9 @@ button#place_order {
 label[for="shipping_method_0_nova_poshta_shipping1"] {
   display: none !important;
 }
+#shipping_method {
+  width: 100%;
+}
 .wc-ukr-shipping-checkbox {
   background: #fbfbfb;
   border: 2px solid #fbfbfb;
@@ -496,6 +649,7 @@ label[for="shipping_method_0_nova_poshta_shipping1"] {
   padding: 7px 5px;
 }
 #wcus_np_billing_custom_address_field {
+  margin-bottom: 10px !important;
   .woocommerce-input-wrapper {
     width: 100% !important;
     padding: 0;

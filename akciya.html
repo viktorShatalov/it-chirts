@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Контакты it-shirts</title>
+  <title>Акции it-shirts</title>
   <link rel="shortcut icon" href="" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet"
@@ -13,36 +13,6 @@
 </head>
 
 <body>
-
-  <!-- contacts__modal-form -->
-
-  <div class="modal" id="contacts__modal-form">
-    <div class="modal__body">
-      <div class="modal__header">
-        <span class="modal__header-title">Перезвоните мне</span>
-        <div data-close-button class="close-button"></div>
-      </div>
-      <div class="modal__content-contacts">
-        <form>
-          <p>
-            <label>Имя и фамилия</label>
-            <input type="text" class="contacts__form-modal" placeholder="Ваше полное имя">
-          </p>
-          <p>
-            <label>Телефон</label>
-            <input type="text" class="contacts__form-modal" placeholder="Укажите номеры телефона">
-          </p>
-          <p class="wpcf7-form-textarea">
-            <label>Вопрос</label>
-            <textarea class="contacts__form-modal" placeholder="Кратко оишите тематику вашего вопроса"></textarea>
-          </p>
-          <input type="submit" value="Оставить заявку">
-        </form>
-      </div>
-    </div>
-  </div>
-  <div id="overlay"></div>
-
   <!-- modal -->
   <div class="modal" id="modal">
     <div class="modal__body">
@@ -275,221 +245,61 @@
                   <a href="#">Главная</a>
                 </li>
                 <li>
-                  <span>Контакты</span>
+                  <span>Постоянные акции</span>
                 </li>
               </ul>
             </nav>
             <!-- // -->
             <div class="content">
-              <h1>Контакты</h1>
-              <script type="text/javascript"
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBy6gPfDGeLgyTHWHDEkdbwsFN5022W9Vk"></script>
-
-              <script type="text/javascript">
-                // When the window has finished loading create our google map below
-                google.maps.event.addDomListener(window, 'load', init);
-
-                function init() {
-                  // Basic options for a simple Google Map
-                  // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-                  var mapOptions = {
-                    // How zoomed in you want the map to start at (always required)
-                    zoom: 17,
-                    // zoom: 12,
-
-                    // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(46.632287, 32.604014), // New York
-
-                    // How you would like to style the map. 
-                    // This is where you would paste any style found on Snazzy Maps.
-                    styles: [{
-                      "featureType": "all",
-                      "elementType": "labels.text.fill",
-                      "stylers": [{
-                        "saturation": 36
-                      }, {
-                        "color": "#000000"
-                      }, {
-                        "lightness": 40
-                      }]
-                    }, {
-                      "featureType": "all",
-                      "elementType": "labels.text.stroke",
-                      "stylers": [{
-                        "visibility": "on"
-                      }, {
-                        "color": "#000000"
-                      }, {
-                        "lightness": 16
-                      }]
-                    }, {
-                      "featureType": "all",
-                      "elementType": "labels.icon",
-                      "stylers": [{
-                        "visibility": "off"
-                      }]
-                    }, {
-                      "featureType": "administrative",
-                      "elementType": "geometry.fill",
-                      "stylers": [{
-                        "color": "#000000"
-                      }, {
-                        "lightness": 20
-                      }]
-                    }, {
-                      "featureType": "administrative",
-                      "elementType": "geometry.stroke",
-                      "stylers": [{
-                        "color": "#000000"
-                      }, {
-                        "lightness": 17
-                      }, {
-                        "weight": 1.2
-                      }]
-                    }, {
-                      "featureType": "landscape",
-                      "elementType": "geometry",
-                      "stylers": [{
-                        "color": "#000000"
-                      }, {
-                        "lightness": 20
-                      }]
-                    }, {
-                      "featureType": "poi",
-                      "elementType": "geometry",
-                      "stylers": [{
-                        "color": "#000000"
-                      }, {
-                        "lightness": 21
-                      }]
-                    }, {
-                      "featureType": "road.highway",
-                      "elementType": "geometry.fill",
-                      "stylers": [{
-                        "color": "#000000"
-                      }, {
-                        "lightness": 17
-                      }]
-                    }, {
-                      "featureType": "road.highway",
-                      "elementType": "geometry.stroke",
-                      "stylers": [{
-                        "color": "#000000"
-                      }, {
-                        "lightness": 29
-                      }, {
-                        "weight": 0.2
-                      }]
-                    }, {
-                      "featureType": "road.arterial",
-                      "elementType": "geometry",
-                      "stylers": [{
-                        "color": "#000000"
-                      }, {
-                        "lightness": 18
-                      }]
-                    }, {
-                      "featureType": "road.local",
-                      "elementType": "geometry",
-                      "stylers": [{
-                        "color": "#000000"
-                      }, {
-                        "lightness": 16
-                      }]
-                    }, {
-                      "featureType": "transit",
-                      "elementType": "geometry",
-                      "stylers": [{
-                        "color": "#000000"
-                      }, {
-                        "lightness": 19
-                      }]
-                    }, {
-                      "featureType": "water",
-                      "elementType": "geometry",
-                      "stylers": [{
-                        "color": "#000000"
-                      }, {
-                        "lightness": 17
-                      }]
-                    }]
-                  };
-
-                  // Get the HTML DOM element that will contain your map 
-                  // We are using a div with id="map" seen below in the <body>
-                  var mapElement = document.getElementById('map');
-
-                  // Create the Google Map using our element and options defined above
-                  var map = new google.maps.Map(mapElement, mapOptions);
-
-                  // Let's also add a marker while we're at it
-                  var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(46.632287, 32.604014),
-                    icon: 'https://it-shirts.com/wp-content/themes/shirts/images/it-shirts_marker.png',
-                    map: map,
-                    title: 'Херсон, ул. Пилипа Орлика, 39'
-                  });
-                }
-              </script>
-
+              <h1>ПОСТОЯННЫЕ АКЦИИ</h1>
               <div class="page-content-image">
-                <div id="map"></div>
+                <img src="img/delivery-content.jpg" alt="">
               </div>
-              <div class="contacts__bottom">
-                <div class="contacts__left">
-                  <p>Для связи с нами пишите на почту или воспользуйтесь формой ниже, если у Вас есть:</p>
-                  <ul>
-                    <li>предложения о сотрудничестве;</li>
-                    <li>вопросы касательно товара или сервиса;</li>
-                    <li>претензии;</li>
-                  </ul>
-                  <p>Мы рассмотрим Ваше письмо и ответим в течении 24 часов с момента получения.
-                    Спасибо, что остаетесь на связи.</p>
-                  <h2>ЖДЕМ ВАШИХ ПИСЕМ</h2>
-                  <div class="contacts__form">
-                    <form>
-                      <p>
-                        <label>Имя и фамилия</label>
-                        <input type="text" class="contacts__form" placeholder="Ваше полное имя">
-                      </p>
-                      <p>
-                        <label>Телефон</label>
-                        <input type="text" class="contacts__form"
-                          placeholder="Укажите номер вашего мобильного телефона">
-                      </p>
-                      <p>
-                        <label>Email</label>
-                        <input type="text" class="contacts__form" placeholder="Укажите ваш Email">
-                      </p>
-                      <p class="wpcf7-form-textarea">
-                        <label>Ваш вопрос</label>
-                        <textarea class="contacts__form"
-                          placeholder="Поделитесь Вашим вопросом или предложением"></textarea>
-                      </p>
-                      <input type="submit" value="Отправить письмо">
-                    </form>
+              <article class="block-actions">
+                <section class="block-actions__item">
+                  <div class="block-actions__item-image">
+                    <img src="img/itshirts-instagram-akcii.jpg" alt="">
                   </div>
-                </div>
-                <div class="contacts__right">
-                  <div class="title">Наши контакты</div>
-                  <div class="icon adress">г. Херсон, ул. Пилипа Орлика, 39</div>
-                  <div class="icon phone">+38 (066) 028-02-08</div>
-                  <div class="phone__pseudo">Телефон + Viber + Telegram</div>
-                  <div class="icon mail">itshirtscom@gmail.com</div>
-                  <div class="title">Время работы</div>
-                  <div class="icon work__day">Пн. - Пт.: 10:00 - 19:00</div>
-                  <div class="holidays">Сб. - Вс.: выходной</div>
-                  <div class="modal__contacts__form">
-                    <a href="#" data-modal-target="#contacts__modal-form" id="modal__contacts__form">Заказать обратный
-                      звонок</a>
+                  <div class="block-actions__item-text">
+                    <h4>Фото в нашей одежде</h4>
+                    <p>Отмечайте <strong>@itshirts.store</strong> на фото в Instagram, на котором Вы в нашей футболке и
+                      гарантировано получайте скидку 10% на одну футболку.</p>
+                    <p>За самые креативные фото — приз.</p>
                   </div>
-                  <div class="social">
-                    <a href="https://vk.com/itshirtscom" target="_blank" class="icon vk-border"></a>
-                    <a href="https://vk.com/itshirtscom" target="_blank" class="icon instagram-border"></a>
-                    <a href="https://vk.com/itshirtscom" target="_blank" class="icon facebook-border"></a>
+                  <div class="block-projects__item-name">
+                    -10%
                   </div>
-                </div>
-              </div>
+                </section>
+                <section class="block-actions__item">
+                  <div class="block-actions__item-image">
+                    <img src="img/itshirts-instagram-akcii2.jpg" alt="">
+                  </div>
+                  <div class="block-actions__item-text">
+                    <h4>Футболка за идею</h4>
+                    <p>Если у Вас есть свежие, интересные, креативные или смешные идеи айтишной тематики для наших
+                      футболок — <a href="">пишите нам.</a>За лучшие идеи футболка в подарок..</p>
+                  </div>
+                  <div class="block-projects__item-name">
+                    футболка
+                  </div>
+                </section>
+                <section class="block-actions__item">
+                  <div class="block-actions__item-image">
+                    <img src="img/itshirts-instagram-akcii3.jpg" alt="">
+                  </div>
+                  <div class="block-actions__item-text">
+                    <h4>IT-история</h4>
+                    <p>Расскажите айтишную историю или случай из своей жизни в Instagram или Facebook, дополнив её фото.
+                      Отметьте <strong>@itshirtscom</strong> и получите 10% на футболку.</p>
+                  </div>
+                  <div class="block-projects__item-name">
+                    -10%
+                  </div>
+                </section>
+              </article>
+              <p>Нам постояно хочется сделать что-то приятное для своих покупателей, и в то же время мы заботимся о
+                своём бренде. Поэтому в нашем магазине существуют три постоянных акции. Участвуя в них Вы получите
+                скидки на нашу продукцию, а мы — частичку Вашего внимания.</p>
             </div>
           </main>
           <!-- footer -->
