@@ -148,6 +148,10 @@ jQuery(document).ready(function ($) {
     $(".item__color .item").removeClass("active");
     $(this).addClass("active");
   });
+  $(".gift__content-right__price").on("click", function () {
+    $(".gift").children().removeClass("active");
+    $(this).addClass("active");
+  });
   $(".item__size .item").on("click", function () {
     $(".item__size .item").removeClass("active");
     $(this).addClass("active");
