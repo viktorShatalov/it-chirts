@@ -118,9 +118,24 @@
 #page-404 {
   text-align: center;
   padding: 0 0 200px;
+  color: #3f3f3f;
+  strong {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 1em;
+  }
   .aside__logo {
     &::after {
       content: none;
+    }
+  }
+  #main {
+    a {
+      color: rgb(231, 73, 40);
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }

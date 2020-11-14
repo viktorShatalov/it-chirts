@@ -1063,6 +1063,7 @@ li.tablinks span::before,
 }
 
 #checkout h3,
+#thankyou h3,
 #page-404 h3,
 #blog h3 {
   color: #9e9e9e;
@@ -1074,6 +1075,7 @@ li.tablinks span::before,
 }
 
 #checkout #header,
+#thankyou #header,
 #page-404 #header,
 #blog #header {
   position: -webkit-sticky;
@@ -1084,18 +1086,21 @@ li.tablinks span::before,
 }
 
 #checkout #header .container,
+#thankyou #header .container,
 #page-404 #header .container,
 #blog #header .container {
   height: 30px;
 }
 
 #checkout .main__content,
+#thankyou .main__content,
 #page-404 .main__content,
 #blog .main__content {
   padding: 0;
 }
 
 #checkout .aside__logo,
+#thankyou .aside__logo,
 #page-404 .aside__logo,
 #blog .aside__logo {
   margin-bottom: 0;
@@ -1103,12 +1108,16 @@ li.tablinks span::before,
 }
 
 #checkout .aside__logo path,
+#thankyou .aside__logo path,
 #page-404 .aside__logo path,
 #blog .aside__logo path {
   fill: black;
 }
 
 #checkout .aside__logo path:nth-child(4), #checkout .aside__logo path:nth-child(1), #checkout .aside__logo path:nth-child(11),
+#thankyou .aside__logo path:nth-child(4),
+#thankyou .aside__logo path:nth-child(1),
+#thankyou .aside__logo path:nth-child(11),
 #page-404 .aside__logo path:nth-child(4),
 #page-404 .aside__logo path:nth-child(1),
 #page-404 .aside__logo path:nth-child(11),
@@ -1119,18 +1128,21 @@ li.tablinks span::before,
 }
 
 #checkout #cart,
+#thankyou #cart,
 #page-404 #cart,
 #blog #cart {
   min-width: 120px;
 }
 
 #checkout #main .container,
+#thankyou #main .container,
 #page-404 #main .container,
 #blog #main .container {
   padding-top: 30px;
 }
 
 #checkout .checkout__content,
+#thankyou .checkout__content,
 #page-404 .checkout__content,
 #blog .checkout__content {
   background: white;
@@ -1144,6 +1156,9 @@ li.tablinks span::before,
 #checkout .woocommerce form .form-row.woocommerce-validated .select2-container,
 #checkout .woocommerce form .form-row.woocommerce-validated input.input-text,
 #checkout .woocommerce form .form-row.woocommerce-validated select,
+#thankyou .woocommerce form .form-row.woocommerce-validated .select2-container,
+#thankyou .woocommerce form .form-row.woocommerce-validated input.input-text,
+#thankyou .woocommerce form .form-row.woocommerce-validated select,
 #page-404 .woocommerce form .form-row.woocommerce-validated .select2-container,
 #page-404 .woocommerce form .form-row.woocommerce-validated input.input-text,
 #page-404 .woocommerce form .form-row.woocommerce-validated select,
@@ -1151,6 +1166,35 @@ li.tablinks span::before,
 #blog .woocommerce form .form-row.woocommerce-validated input.input-text,
 #blog .woocommerce form .form-row.woocommerce-validated select {
   border-color: #dedede;
+}
+
+#thankyou #main {
+  padding: 0 0 120px;
+}
+
+#thankyou #main .container {
+  max-width: 480px;
+  text-align: center;
+}
+
+#thankyou #main .container strong {
+  color: #2a2a2a;
+  display: inline-block;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+#thankyou #main .container p {
+  margin: 15px 0;
+  color: #949494;
+  font-size: 14px;
+  line-height: 1;
+}
+
+#thankyou #main .container a {
+  color: #e64927;
+  display: inline-block;
+  margin: 15px 0 0;
 }
 
 .product__card {
@@ -3259,10 +3303,26 @@ input[type="s"]::placeholder {
 #page-404 {
   text-align: center;
   padding: 0 0 200px;
+  color: #3f3f3f;
+}
+
+#page-404 strong {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 1em;
 }
 
 #page-404 .aside__logo::after {
   content: none;
+}
+
+#page-404 #main a {
+  color: #e74928;
+  text-decoration: underline;
+}
+
+#page-404 #main a:hover {
+  text-decoration: none;
 }
 
 #footer {
