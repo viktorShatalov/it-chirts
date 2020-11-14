@@ -7,7 +7,7 @@ jQuery(document).ready(function ($) {
   });
 
   // subscribe-instagram
-  jQuery(".subscribe-instagram").hide();
+  // jQuery(".subscribe-instagram").hide();
   jQuery(".subscribe-instagram i").on("click", function () {
     jQuery(this).parent().hide();
   });
@@ -224,5 +224,10 @@ jQuery(document).ready(function ($) {
   });
   $(".showcoupon").click(function () {
     $("#pwgc-redeem-gift-card-form").slideUp("fast");
+  });
+
+  // woocomerce eroor
+  jQuery(".woocommerce-error .close").on("click", function () {
+    jQuery(".woocommerce-error").hide("fast");
   });
 });

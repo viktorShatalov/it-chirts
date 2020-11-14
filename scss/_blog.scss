@@ -1,4 +1,5 @@
-#blog {
+#blog,
+#page-404 {
   .container {
     max-width: 800px;
   }
@@ -112,5 +113,14 @@
   }
   .content {
     margin-bottom: 0;
+  }
+}
+#page-404 {
+  text-align: center;
+  padding: 0 0 200px;
+  .aside__logo {
+    &::after {
+      content: none;
+    }
   }
 }

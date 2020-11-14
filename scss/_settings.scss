@@ -256,10 +256,10 @@ textarea {
 }
 .wpcf7-not-valid-tip {
   position: absolute;
-  left: 0;
-  bottom: -37px;
-  width: 100%;
+  right: 6px;
+  bottom: -15px;
   text-align: right;
+  font-size: 14px;
 }
 .wpcf7 form .wpcf7-response-output {
   margin: 0 auto;

@@ -510,6 +510,14 @@
   }
 }
 .contacts__form {
+  .wpcf7-not-valid-tip {
+    bottom: -2px;
+  }
+  .wpcf7-form-textarea {
+    .wpcf7-not-valid-tip {
+      bottom: 2px;
+    }
+  }
   form {
     p {
       display: flex;
@@ -740,10 +748,25 @@
     bottom: -6px;
     top: unset;
   }
+  .pwgc-field-container {
+    display: none;
+  }
+  input[type="text"] {
+    position: absolute;
+    left: -1000%;
+  }
   strong {
     display: block;
     font-size: 18px;
     padding-bottom: 1em;
+  }
+  .ivpa_attribute {
+    grid-template-columns: 1fr !important;
+  }
+  .ivpa_title {
+    background: transparent !important;
+    margin: 10px 0 !important;
+    padding-bottom: 0 !important;
   }
   .gift {
     display: flex;

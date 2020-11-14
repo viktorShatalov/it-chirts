@@ -171,9 +171,14 @@ li.tablinks span,
   }
   .cart__item-title__price {
     color: rgb(50, 28, 25);
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 16px !important;
+    font-weight: 700 !important;
     line-height: 1;
+    .woocommerce-Price-amount,
+    .woocommerce-Price-currencySymbol {
+      font-size: 16px !important;
+      font-weight: 700 !important;
+    }
   }
 }
 .cart__item-count {
@@ -182,7 +187,7 @@ li.tablinks span,
   text-align: center;
   width: 110px;
   display: flex;
-  bottom: -23px;
+  bottom: -24px;
   right: 32px;
 }
 .count__number {
@@ -242,7 +247,7 @@ li.tablinks span,
 .cart__item-price {
   position: absolute;
   right: 20px;
-  bottom: 20px;
+  bottom: 19px;
   .woocommerce-Price-amount {
     max-width: 110px;
     width: 110px;
@@ -322,6 +327,7 @@ li.tablinks span,
   padding: 20px;
 }
 #checkout,
+#page-404,
 #blog {
   h3 {
     color: rgb(158, 158, 158);
@@ -332,7 +338,7 @@ li.tablinks span,
     margin: 10px 0 30px;
   }
   #header {
-    position: relative;
+    position: sticky;
     left: 0;
     top: 0;
     padding: 12px 0px;
@@ -376,4 +382,3 @@ li.tablinks span,
     border-color: rgb(222, 222, 222);
   }
 }
-
