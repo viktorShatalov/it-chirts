@@ -20,7 +20,8 @@
 }
 #contacts__modal-form,
 #akciya__modal-form {
-  width: 445px;
+  width: 100%;
+  max-width: 445px;
   border-radius: 6px;
   top: 50%;
   padding: 10px 0;
@@ -64,9 +65,13 @@
   font-size: 13px;
   strong {
     font-family: inherit;
+    display: inline-block;
+    width: 100%;
   }
   p {
     margin: 10px 0;
+    display: inline-block;
+    width: 100%;
   }
 }
 .cart__empty,

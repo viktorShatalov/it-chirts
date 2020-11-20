@@ -13,7 +13,7 @@ const ContentItem = () => {
       .then((res) => res.json())
       .then(
         (res) => {
-          console.log(res);
+          // console.log(res);
         },
         (error) => {
           console.log(error);

@@ -43,6 +43,7 @@
 }
 #cart,
 li.tablinks span,
+.contacts__right-cooperation .icon,
 .contacts__right .icon {
   &::before {
     font-family: "it-shirts-font";
@@ -179,16 +180,19 @@ li.tablinks span,
       font-size: 16px !important;
       font-weight: 700 !important;
     }
+    .woocommerce-Price-currencySymbol {
+      text-transform: lowercase;
+    }
   }
 }
 .cart__item-count {
-  position: relative;
+  position: absolute;
   height: 30px;
   text-align: center;
   width: 110px;
   display: flex;
-  bottom: -24px;
-  right: 32px;
+  bottom: 19px;
+  right: 140px;
 }
 .count__number {
   background: rgb(255, 255, 255);
@@ -248,9 +252,10 @@ li.tablinks span,
   position: absolute;
   right: 20px;
   bottom: 19px;
+  width: 100%;
+  max-width: 110px;
   .woocommerce-Price-amount {
-    max-width: 110px;
-    width: 110px;
+    width: 100%;
     height: 30px;
     border: 1px solid rgb(253, 228, 217);
     background: rgb(255, 248, 229);
@@ -259,7 +264,7 @@ li.tablinks span,
     font-weight: 700;
     font-family: inherit;
     display: inline-block;
-    padding: 2px 0 0;
+    padding: 2px 7px 0;
     .woocommerce-Price-currencySymbol {
       font-size: 16px !important;
       font-weight: 700 !important;
@@ -292,9 +297,6 @@ li.tablinks span,
   width: 100%;
   max-width: 185px;
   white-space: nowrap;
-}
-.woocommerce-Price-amount {
-  margin-left: 5px;
 }
 .woocommerce-Price-amount,
 .woocommerce-Price-currencySymbol {

@@ -14,7 +14,7 @@
 
 <body>
   <!-- modal -->
-  <div class="modal active" id="modal">
+  <div class="modal " id="modal">
     <div class="modal__body">
       <div class="modal__header">
         <span class="modal__header-title">Корзина</span>
@@ -27,15 +27,15 @@
 
         <!-- cart empty -->
 
-        <!-- <div class="is-cart__empty">
+        <div class="is-cart__empty">
           <div class="cart__empty"></div>
           <strong>Ваша корзина пуста</strong>
           <p>Чтобы это исправить выберите и купите понравившуюся футболку.</p>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
-  <div id="overlay" class="active"></div>
+  <div id="overlay"></div>
   <!-- preloader -->
   <div class="loader-wrap">
     <div class="logo">
@@ -156,30 +156,33 @@
                 <button type="submit" class="search-submit icon icon-arrow-right-small" value=""></button>
               </form>
             </div>
-            <nav class="aside__category-shop">
-              <span class="aside__category-shop-title">Толстовки</span>
-              <ul>
-                <li><a href="">ВСЕ</a></li>
-                <li><a href="">ЛЮБОМУ АЙТИШНИКУ</a></li>
-                <li><a href="">ПРОГРАММИСТУ</a></li>
-                <li><a href="">ДИЗАЙНЕРУ</a></li>
-                <li><a href="">ВЕРСТАЛЬЩИКУ</a></li>
-                <li><a href="">ТЕСТИРОВЩИКУ</a></li>
-                <li><a href="">АДМИНУ</a></li>
-                <li><a href="">МАРКЕТОЛОГУ SMM/SEO</a></li>
-              </ul>
-            </nav>
-            <nav class="aside__category-shop">
-              <span class="aside__category-shop-title">футболки</span>
-              <ul>
-                <li><a href="">ВСЕ</a></li>
-                <li><a href="">ЛЮБОМУ АЙТИШНИКУ</a></li>
-                <li><a href="">ПРОГРАММИСТУ</a></li>
-                <li><a href="">ДИЗАЙНЕРУ</a></li>
-                <li><a href="">ВЕРСТАЛЬЩИКУ</a></li>
-                <li><a href="">ТЕСТИРОВЩИКУ</a></li>
-                <li><a href="">АДМИНУ</a></li>
-                <li><a href="">МАРКЕТОЛОГУ SMM/SEO</a></li>
+            <nav class="aside__category-shop-menu">
+              <ul class="accordeon">
+                <li class="aside__category-shop-title"><a href="">Главная</a></li>
+                <li class="aside__category-shop-title"><a href="">Толстовки</a>
+                  <ul class="submenu">
+                    <li><a href="">ВСЕ</a></li>
+                    <li><a href="">ЛЮБОМУ АЙТИШНИКУ</a></li>
+                    <li><a href="">ПРОГРАММИСТУ</a></li>
+                    <li><a href="">ДИЗАЙНЕРУ</a></li>
+                    <li><a href="">ВЕРСТАЛЬЩИКУ</a></li>
+                    <li><a href="">ТЕСТИРОВЩИКУ</a></li>
+                    <li><a href="">АДМИНУ</a></li>
+                    <li><a href="">МАРКЕТОЛОГУ SMM/SEO</a></li>
+                  </ul>
+                </li>
+                <li class="aside__category-shop-title"><a href="">футболки</a>
+                  <ul class="submenu">
+                    <li><a href="">ВСЕ</a></li>
+                    <li><a href="">ЛЮБОМУ АЙТИШНИКУ</a></li>
+                    <li><a href="">ПРОГРАММИСТУ</a></li>
+                    <li><a href="">ДИЗАЙНЕРУ</a></li>
+                    <li><a href="">ВЕРСТАЛЬЩИКУ</a></li>
+                    <li><a href="">ТЕСТИРОВЩИКУ</a></li>
+                    <li><a href="">АДМИНУ</a></li>
+                    <li><a href="">МАРКЕТОЛОГУ SMM/SEO</a></li>
+                  </ul>
+                </li>
               </ul>
             </nav>
           </div>
@@ -218,6 +221,7 @@
           <!-- header -->
           <header id="header">
             <div class="container">
+              <div class="burger"><span></span></div>
               <nav class="header__menu ">
                 <ul>
                   <li><a href="">Доставка и оплата</a></li>
@@ -504,12 +508,12 @@
   </div>
 
   <!-- react -->
-  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <!-- <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin>
   </script>
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
   <!-- components -->
-  <script type="text/babel" src="component/cart_popup.jsx"></script>
+  <!-- <script type="text/babel" src="component/cart_popup.jsx"></script> -->
   <!-- end components -->
   <!-- end react -->
 

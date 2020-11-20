@@ -189,7 +189,8 @@
               </form>
             </div>
             <nav class="aside__category-shop-menu">
-              <ul>
+              <ul class="accordeon">
+                <li class="aside__category-shop-title"><a href="">Главная</a></li>
                 <li class="aside__category-shop-title"><a href="">Толстовки</a>
                   <ul class="submenu">
                     <li><a href="">ВСЕ</a></li>
@@ -253,6 +254,7 @@
             <!-- header -->
             <header id="header">
               <div class="container">
+                <div class="burger"><span></span></div>
                 <nav class="header__menu ">
                   <ul>
                     <li><a href="">Доставка и оплата</a></li>
@@ -357,8 +359,7 @@
                       </div>
                     </div>
                     <div class="table__size">
-                      <img src="img/shirt_sizes.svg" alt="Таблица размеров">
-                      <span>Таблица размеров</span>
+                      <a href="">Таблица размеров</a>
                       <div class="table__size-pseudo ">
                         <div class="table__size-pseudo-content">
                           <img src="img/shirt-boy.jpg" alt="">
@@ -585,6 +586,16 @@
   <script src="js/jquery/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/jquery.zoom.min.js"></script>
+  <script>
+
+
+    // zoom
+    jQuery(document).ready(function ($) {
+      $(".card__product-img").zoom({});
+    })
+
+
+  </script>
   <script src="js/main.js"></script>
 </body>
 

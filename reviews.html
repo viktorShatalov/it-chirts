@@ -270,7 +270,7 @@
                       — удобно, приятное дополнение к заказу.</p>
                   </div>
                 </section>
-                <section class="block-reviews__item grid-item ">
+                <section class="block-reviews__item grid-item w2">
                   <div class="item__img">
                     <img src="img/tshirts-taking_control-mono_00-68x68.png" alt="">
                   </div>
@@ -376,14 +376,22 @@
       </section>
     </div>
   </div>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
 
 
   <script src="js/jquery/jquery.min.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   <script src="js/main.js"></script>
 
-
+  <script>
+    jQuery('.grid').masonry({
+      columnWidth: '.grid-item',
+      itemSelector: '.grid-item',
+      "gutter": 33,
+    });
+  </script>
 </body>
 
 </html>

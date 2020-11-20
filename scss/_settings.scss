@@ -7,12 +7,11 @@
   margin: 0;
   padding: 0;
   border: none;
+  box-sizing: border-box;
   box-shadow: none;
   vertical-align: baseline;
   outline: none;
-  -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  box-sizing: border-box;
 }
 body {
   background: rgb(246, 246, 246);
@@ -122,10 +121,6 @@ textarea {
   overflow: hidden;
 }
 
-.is-mobile {
-  display: none;
-}
-
 address,
 dl,
 fieldset,
@@ -221,7 +216,6 @@ textarea {
 #breadcumbs {
   color: rgb(63, 63, 63);
   font-size: 14px;
-  margin-bottom: 2em;
   ul {
     padding: 0;
     @include flex;
@@ -256,14 +250,23 @@ textarea {
 }
 .wpcf7-not-valid-tip {
   position: absolute;
-  right: 6px;
+  right: 0;
   bottom: -15px;
-  text-align: right;
-  font-size: 14px;
 }
 .wpcf7 form .wpcf7-response-output {
   margin: 0 auto;
+  max-width: 85%;
+  border: none;
+  border-radius: 3px;
+  padding: 12px 18px !important;
+  line-height: 1.2;
 }
-.wpcf7 form.invalid .wpcf7-response-output {
-  display: none !important;
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {
+  background: #ffe3e3;
+  color: #c26464;
+}
+.wpcf7 form.sent .wpcf7-response-output {
+  background: rgb(237, 241, 222);
+  color: rgb(148, 159, 108);
 }

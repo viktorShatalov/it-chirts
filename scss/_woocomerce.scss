@@ -87,21 +87,22 @@ form[name="checkout"] {
   }
 }
 .select2-container--open .select2-dropdown {
-  top: -5px;
+  top: -12px;
   border: 1px solid rgb(222, 222, 222);
   border-top: 0px solid rgb(247, 242, 229);
   color: rgb(54, 54, 54);
   font-weight: bold;
   font-family: "PT Sans", sans-serif;
 }
+#billing_country_field {
+  .select2-container--open .select2-dropdown {
+    display: none !important;
+  }
+}
 .select2-container--default
   .select2-selection--single
   .select2-selection__arrow {
   top: 8px;
-}
-.select2-search--dropdown,
-.select2-search {
-  display: none !important;
 }
 
 #order_comments_field {
@@ -135,6 +136,9 @@ form[name="checkout"] {
 #ship-to-different-address,
 label[for="payment_method_liqpay-webplus"] img,
 .woocommerce-shipping-totals > th {
+  display: none;
+}
+label[for="payment_method_liqpay-webplus"] img {
   display: none;
 }
 #payment {
@@ -210,6 +214,9 @@ tr.fee td {
   padding: 15px 20px 0px;
 }
 .cart-subtotal {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
   td {
     padding-bottom: 0 !important;
     justify-content: flex-end;
@@ -220,6 +227,9 @@ tr.fee td {
     color: rgb(170, 161, 148);
     display: inline-block;
     font-size: 16px !important;
+  }
+  .woocommerce-Price-amount {
+    margin-left: 5px;
   }
 }
 #add_payment_method #payment,
@@ -236,7 +246,6 @@ tr.order-total {
     justify-content: space-between;
     align-items: baseline;
     width: 100%;
-    padding-top: 0 !important;
   }
 }
 .order-details tr td:first-child {
@@ -247,18 +256,15 @@ tr.order-total {
 .woocommerce-checkout #payment ul.payment_methods li input,
 .woocommerce ul#shipping_method li input {
   width: 20px;
+  position: absolute;
+  left: -1000%;
 }
 .woocommerce ul#shipping_method {
-  .amount {
-    color: rgb(170, 161, 148);
+  .woocommerce-Price-currencySymbol,
+  .woocommerce-Price-amount {
     display: inline-block;
-    font-family: "Gilroy";
-    font-weight: 800;
-    font-size: 16px;
-    text-transform: uppercase;
-  }
-  .woocommerce-Price-currencySymbol {
-    font-size: 16px;
+    font: normal 16px/24px "PT Sans", sans-serif;
+    text-transform: lowercase;
   }
 }
 #billing_city_field,
@@ -360,6 +366,8 @@ tr.order-total {
   display: flex;
   align-items: baseline;
   white-space: nowrap;
+  width: 100%;
+  display: block;
 }
 .woocommerce-form-coupon-toggle {
   display: flex;
@@ -387,6 +395,16 @@ tr.order-total {
     font: normal 14px "PT Sans", sans-serif;
     &:hover {
       text-decoration: none;
+    }
+  }
+  .close {
+    top: 14px !important;
+  }
+  .woocommerce-message {
+    border-top-color: transparent;
+    background-color: transparent;
+    &::before {
+      color: rgb(234, 92, 58);
     }
   }
 }
@@ -434,6 +452,7 @@ form.checkout_coupon,
     padding: 14px 0px;
     border-radius: 0;
     font-weight: normal;
+    cursor: pointer;
     &:hover {
       background: none;
       color: rgb(230, 73, 39);
@@ -548,6 +567,19 @@ form.checkout_coupon,
 .place-order {
   padding: 0 20px 20px !important;
   margin: 0 !important;
+  text-align: right;
+  .pwgc-checkout-subtitle {
+    line-height: 2;
+  }
+  .woocommerce-Price-amount,
+  .woocommerce-Price-currencySymbol {
+    color: #aaa194;
+    display: inline-block;
+    font-family: "Gilroy";
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
 }
 button#place_order {
   display: block;
@@ -573,16 +605,11 @@ button#place_order {
     background: rgb(255, 130, 63) !important;
   }
 }
-label[for="shipping_method_0_nova_poshta_shipping1"] {
-  display: none !important;
-}
-#shipping_method {
-  width: 100%;
-}
+
 .wc-ukr-shipping-checkbox {
-  background: #fbfbfb;
-  border: 2px solid #fbfbfb;
-  color: #270e0a;
+  background: rgb(251, 251, 251);
+  border: 2px solid rgb(251, 251, 251);
+  color: rgb(39, 14, 10);
   font-size: 14px;
   line-height: normal;
   position: relative;
@@ -605,7 +632,13 @@ label[for="shipping_method_0_nova_poshta_shipping1"] {
   font-size: 14px !important;
   height: auto;
   padding: 7px 5px;
+  margin: 0 0 11px;
+  border: 1px solid #dedede;
 }
+#wcus_np_billing_fields {
+  padding-right: 7px;
+}
+
 #wcus_np_billing_custom_address_field {
   margin-bottom: 10px !important;
   .woocommerce-input-wrapper {
@@ -648,15 +681,91 @@ label[for="shipping_method_0_nova_poshta_shipping1"] {
 .woocommerce-error,
 .woocommerce-message.message-success,
 div.wpcf7-validation-errors,
-div.wpcf7-mail-sent-ok {
-  background: #ffe3e3;
+div.wpcf7-mail-sent-ok,
+#pwgc-redeem-error {
+  background-color: #ffe3e3;
   border: none;
   border-radius: 3px;
   color: #c26464;
   padding: 12px 18px;
   position: relative;
   margin: 10px 0 !important;
+  text-align: left;
+}
+#pwgc-redeem-error {
+  color: #c26464 !important;
+  padding: 0 0 0 20px !important;
+  line-height: 3;
 }
 .gift__content-right .ivpa_title {
   font-size: 18px !important;
 }
+#thankyou {
+  text-align: center;
+  strong {
+    color: #2a2a2a;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  p {
+    color: #949494;
+    font-size: 14px;
+    line-height: 1;
+  }
+  a {
+    display: inline-block;
+    margin-top: 1em;
+    text-decoration: none;
+    color: #e64927;
+  }
+}
+
+.select2-container--default .select2-results__option--highlighted {
+  &[data-selected],
+  &[aria-selected] {
+    background-color: #e64927;
+  }
+}
+#add_payment_method #payment div.payment_box p:last-child,
+.woocommerce-cart #payment div.payment_box p:last-child,
+.woocommerce-checkout #payment div.payment_box p:last-child {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: show__block;
+}
+.woocommerce-error li,
+.woocommerce-info li,
+.woocommerce-message li {
+  text-align: left;
+}
+#wcus-order-total {
+  .woocommerce-Price-amount {
+    margin-left: 5px;
+  }
+}
+#shipping_method {
+  width: 100%;
+  margin: 30px 0 0 !important;
+  display: flex;
+  align-items: center;
+  label {
+    cursor: pointer;
+    padding: 7px;
+    margin: 0;
+    background: rgb(251, 251, 251);
+    border: 2px solid rgb(251, 251, 251);
+  }
+  label[for="shipping_method_0_flat_rate5"],
+  input:checked + label {
+    border: 2px solid rgb(230, 73, 39);
+    display: inline-block !important;
+    background: white;
+  }
+}
+.cart-discount {
+  td {
+    justify-content: flex-end !important;
+  }
+}
+

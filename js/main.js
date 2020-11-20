@@ -2,12 +2,15 @@ jQuery(document).ready(function ($) {
   //  mobile-menu
 
   jQuery(".burger").click(function () {
-    jQuery(".burger,.header__menu").toggleClass("active");
+    jQuery(".burger,#aside__wrap,#aside__wrap-overlay").toggleClass("active");
+    jQuery(
+      "#checkout .header__menu, #thankyou .header__menu,#page-404 .header__menu"
+    ).toggleClass("active");
     jQuery("body,html").toggleClass("lock");
   });
 
   // subscribe-instagram
-  // jQuery(".subscribe-instagram").hide();
+  jQuery(".subscribe-instagram").hide();
   jQuery(".subscribe-instagram i").on("click", function () {
     jQuery(this).parent().hide();
   });
@@ -20,7 +23,7 @@ jQuery(document).ready(function ($) {
       $preloader.delay(350).fadeOut("350");
     };
 
-    setTimeout(removeLoader, 1500);
+    setTimeout(removeLoader, 750);
   } else {
   }
 
@@ -31,13 +34,38 @@ jQuery(document).ready(function ($) {
         $preloader.delay(350).fadeOut("350");
       };
 
-      setTimeout(removeLoader, 1500);
+      setTimeout(removeLoader, 750);
     } else {
     }
   });
 
   // resize
-  if (jQuery(window).width() < 769) {
+  if (jQuery(window).width() < 580) {
+    jQuery("a.cart__btn").html("");
+    jQuery("#header .container .burger").after(jQuery(".aside__logo").eq(0));
+    jQuery(".product__card-right h1").prependTo(jQuery(".product__card-left"));
+    jQuery(".product__card-description").appendTo(
+      jQuery(".product__card-right")
+    );
+    jQuery("#head_footbolki-show__more").appendTo(
+      jQuery("ul.product__items.it-shirts")
+    );
+    jQuery("#head_tolstovki-show__more").appendTo(
+      jQuery("ul.product__items.it-hoodies")
+    );
+    jQuery("#head_chashki-show__more").appendTo(
+      jQuery("ul.product__items.it-cups")
+    );
+    jQuery("#head_box-show__more").appendTo(
+      jQuery("ul.product__items.it-boxes")
+    );
+    jQuery(".contacts__right").appendTo(jQuery(".page-content-image"));
+    jQuery(".aside__logo").on("click", function () {
+      document.location.replace("/");
+    });
+  }
+  if (jQuery(window).width() >= 768 && jQuery(window).width() <= 1024) {
+    jQuery(".contacts__right").appendTo(jQuery(".page-content-image"));
   }
 
   // modal
@@ -84,6 +112,7 @@ jQuery(document).ready(function ($) {
   modal();
 
   // sliders
+
   jQuery(".first__slider,.second__slider").slick({
     arrows: false,
     dots: false,
@@ -93,10 +122,20 @@ jQuery(document).ready(function ($) {
     variableWidth: true,
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          variableWidth: true,
+        },
+      },
+      {
+        breakpoint: 580,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: true,
+          variableWidth: true,
         },
       },
     ],
@@ -114,12 +153,13 @@ jQuery(document).ready(function ($) {
     adaptiveHeight: true,
     responsive: [
       {
-        breakpoint: 480,
-        settings: {},
+        breakpoint: 580,
+        settings: {
+          draggable: false,
+        },
       },
     ],
   });
-  const settingsNav = {};
   jQuery(".slider-nav").slick({
     arrows: false,
     dots: false,
@@ -127,14 +167,16 @@ jQuery(document).ready(function ($) {
     focusOnSelect: true,
     draggable: false,
     variableWidth: true,
-    infinite: true,
+    infinite: false,
     slidesToShow: 3,
     slidesToScroll: 3,
     centerPadding: "0px",
     responsive: [
       {
-        breakpoint: 480,
-        settings: {},
+        breakpoint: 580,
+        settings: {
+          draggable: false,
+        },
       },
     ],
   });
@@ -159,27 +201,50 @@ jQuery(document).ready(function ($) {
 
   //category menu accerdeon
 
-  jQuery(
-    ".aside__category-shop-title>a:not(.aside__category-shop-title>a:eq(0))"
-  ).click(function (e) {
+  $(".accordeon > li:not(:nth-child(1)) > a").click(function (e) {
     e.preventDefault();
+
+    let menu = $(this).closest(".accordeon");
+
+    if (false == $(this).next().is(":visible")) {
+      menu.find("li").removeClass("slide active");
+      menu.find(".submenu").slideUp();
+    }
+
+    let menu_item = $(this).closest(".aside__category-shop-title");
+    if ($(menu_item).hasClass("slide")) {
+      $(menu_item).removeClass("slide");
+      menu.find(".submenu").slideUp();
+    } else {
+      $(this).next().slideToggle();
+      $(this).parent().addClass("slide");
+    }
   });
 
-  jQuery(".aside__category-shop-title").on("click", function (e) {
-    $(this).children(".submenu").stop(true, true).toggle(350);
-    jQuery(this).toggleClass("active");
-  });
+  const aria_menu = jQuery(".aside__category-shop-title").find(
+    'a[aria-current="page"]'
+  );
+  if (aria_menu) {
+    let item = aria_menu.closest(".submenu");
+    $(item).show();
+    $(aria_menu).closest(".aside__category-shop-title").addClass("slide");
+  }
 
   //table size
   const menu = jQuery(".table__size-pseudo");
-  const menuBtn = jQuery(".table__size");
+  const menuBtn = jQuery(".table__size a");
 
-  menuBtn.on("click", function () {
-    menu.addClass("active");
+  menuBtn.on("click", function (e) {
+    e.preventDefault();
+    menu.toggleClass("active");
   });
 
   $(document).mouseup(function (e) {
-    if (!menu.is(e.target) && menu.has(e.target).length === 0) {
+    if (
+      !menu.is(e.target) &&
+      menu.has(e.target).length === 0 &&
+      !menuBtn.is(e.target)
+    ) {
       menu.removeClass("active");
     }
   });
@@ -211,20 +276,9 @@ jQuery(document).ready(function ($) {
   };
   tab();
   // сертификат в оформлении заказа
-  jQuery(".woocommerce-additional-fields").prepend(jQuery("#payment"));
-  jQuery("#pwgc-redeem-gift-card-form").appendTo(jQuery("#cupon__box"));
-  jQuery("#pwgc-redeem-button").val("Подтвердить");
-  jQuery("#pwgc-redeem-gift-card-number").val("Сертификат");
 
-  $("#link-cert").click(function (e) {
-    e.preventDefault();
-    $("#pwgc-redeem-gift-card-form").slideToggle("fast");
-    $("form.checkout_coupon").slideUp("fast");
-    return false;
-  });
-  $(".showcoupon").click(function () {
-    $("#pwgc-redeem-gift-card-form").slideUp("fast");
-  });
+  jQuery(".woocommerce-additional-fields").prepend(jQuery("#payment"));
+  $("#cupon__box").appendTo($(".place-order"));
 
   // woocomerce eroor
   jQuery(".woocommerce-error .close").on("click", function () {

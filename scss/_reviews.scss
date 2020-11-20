@@ -22,7 +22,6 @@
 }
 .block-reviews__item {
   background: rgb(246, 246, 246);
-  position: relative;
   border-radius: 7px;
   color: rgb(63, 63, 63);
   font-size: 14px;
@@ -30,7 +29,8 @@
   list-style: none;
   margin-bottom: 30px;
   padding: 30px 17px 17px 17px;
-  width: 29%;
+  width: 100%;
+  max-width: 278px;
   .item__img {
     border: 3px solid #fff;
     border-radius: 50%;
@@ -63,52 +63,13 @@
     padding: 0;
   }
 }
-
-@media (max-width: 1224px) {
-  .block-reviews__item {
-    width: 45%;
-    margin-bottom: 0px;
-  }
-}
-
-@media (max-width: 1150px) {
-  .block-reviews__item {
-    width: 43%;
-  }
-}
-
-@media (max-width: 960px) {
-  .block-reviews__item {
-    width: 43% !important;
-  }
-}
-
-@media (max-width: 900px) {
-  .block-reviews__item {
-    width: 40% !important;
-  }
-}
-
-@media (max-width: 740px) and (min-width: 580px) {
-  .block-reviews__item {
-    width: calc(100% - 60px) !important;
-  }
-}
-
-@media (max-width: 579px) {
-  .block-reviews__item {
-    width: calc(50% - 40px) !important;
-  }
-}
-
-@media (max-width: 530px) and (min-width: 341px) {
-  .block-reviews__item {
-    width: calc(100% - 60px) !important;
-  }
-}
-
-@media (max-width: 340px) {
-  .block-reviews__item {
-    width: calc(100% - 20px) !important;
-  }
-}
+/* Контейнер блоков Masonry */
+// .grid {
+//   column-count: 3;
+//   column-gap: 1em;
+//   .grid-item {
+//     display: inline-block;
+//     width: 100%; // важно!
+//     margin-bottom: 1em;
+//   }
+// }

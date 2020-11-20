@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Главная it-shirts</title>
   <link rel="shortcut icon" href="" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,500,700%7CRoboto:500%7CRoboto+Condensed:700&subset=cyrillic,latin,cyrillic,latin,cyrillic,latin">
   <link rel="stylesheet" href="css/style.css">
@@ -189,7 +189,7 @@
               </form>
             </div>
             <nav class="aside__category-shop-menu">
-              <ul>
+              <ul class="accordeon">
                 <li class="aside__category-shop-title"><a href="">Главная</a></li>
                 <li class="aside__category-shop-title"><a href="">Толстовки</a>
                   <ul class="submenu">
@@ -253,6 +253,7 @@
           <!-- header -->
           <header id="header">
             <div class="container">
+              <div class="burger"><span></span></div>
               <nav class="header__menu ">
                 <ul>
                   <li><a href="">Доставка и оплата</a></li>
@@ -628,8 +629,17 @@
     </div>
   </div>
   <script src="js/jquery/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/jquery.zoom.min.js"></script>
+  <script>
+    if (jQuery(window).width() < 580) {
+      jQuery(".modal__footer-tottal").html(
+        jQuery(".modal__footer-tottal").html().replace("Итого:", "")
+      );
+    }
+
+
+  </script>
   <script src="js/main.js"></script>
 </body>
 

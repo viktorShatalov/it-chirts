@@ -163,7 +163,7 @@
     <i></i>
   </div>
   <!-- main wrapper -->
-  <div id="chekout">
+  <div id="checkout">
     <section id="main__wrapper">
       <div class="main__content">
         <!-- header -->
@@ -222,16 +222,41 @@
         <main id="main">
           <div class="container">
             <h1>Оформление заказа</h1>
-            <div class="chekout__content">
-              <form>
+            <div class="checkout__content">
+              <form name="checkout">
                 <div class="contacts-delivery-payment">
-                  <div class="customer_details">
+                  <div id="customer_details">
                     <div class="woocommerce-billing-fields">
                       <h3>Контактные данные</h3>
+                      <div class="woocommerce-billing-fields__field-wrapper">
+                        <p class="form-row">
+                          <label for="">Имя и фамилия *</label>
+                          <input type="text" placeholder="Ваше полное имя">
+                        </p>
+                        <p class="form-row">
+                          <label for="">Телефон *</label>
+                          <input type="text" placeholder="Ваше полное имя">
+                        </p>
+                        <p class="form-row">
+                          <label for="">Email *</label>
+                          <input type="text" placeholder="Ваше полное имя">
+                        </p>
+                        <p class="form-row">
+                          <label for="">Страна *</label>
+                          <input type="text" placeholder="Ваше полное имя">
+                        </p>
+                      </div>
+                      <div class="block__delivery">
+                        <h3>Доставка</h3>
+                        <label for="chek1">Отделение Новой Почты</label>
+                        <input type="text" name="chek1">
+                        <label for="chek2">Курьер Новой Почты</label>
+                        <input type="text" name="chek2">
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="woocommerce-checkout-review-order"></div>
+                <div id="order_review" class="woocommerce-checkout-review-order"></div>
               </form>
             </div>
           </div>
