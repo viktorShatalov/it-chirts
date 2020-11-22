@@ -65,7 +65,7 @@ form[name="checkout"] {
   }
   .select2-container .select2-selection--single {
     height: auto;
-    padding: 6px 10px;
+    padding: 6px 0;
   }
   .select2-dropdown {
     border: 1px solid rgb(222, 222, 222);
@@ -263,8 +263,9 @@ tr.order-total {
   .woocommerce-Price-currencySymbol,
   .woocommerce-Price-amount {
     display: inline-block;
-    font: normal 16px/24px "PT Sans", sans-serif;
+    font: normal 14px "PT Sans", sans-serif;
     text-transform: lowercase;
+    font-weight: bold;
   }
 }
 #billing_city_field,
@@ -367,11 +368,11 @@ tr.order-total {
   align-items: baseline;
   white-space: nowrap;
   width: 100%;
-  display: block;
+  justify-content: space-between;
 }
 .woocommerce-form-coupon-toggle {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: baseline;
   .woocommerce-info::before {
     content: none;
@@ -751,6 +752,9 @@ div.wpcf7-mail-sent-ok,
   align-items: center;
   label {
     cursor: pointer;
+    font-size: 14px;
+    line-height: 1.3;
+    height: 36px;
     padding: 7px;
     margin: 0;
     background: rgb(251, 251, 251);
@@ -768,4 +772,14 @@ div.wpcf7-mail-sent-ok,
     justify-content: flex-end !important;
   }
 }
-
+#shiping__description-ua,
+#shiping__description-ru {
+  color: rgb(139, 139, 139);
+  font-size: 14px;
+  line-height: 1.2;
+}
+#shiping__description-ua {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: show__block;
+}

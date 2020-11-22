@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
   //  mobile-menu
 
-  jQuery(".burger").click(function () {
+  jQuery(".burger,#aside__wrap-overlay").click(function () {
     jQuery(".burger,#aside__wrap,#aside__wrap-overlay").toggleClass("active");
     jQuery(
       "#checkout .header__menu, #thankyou .header__menu,#page-404 .header__menu"
@@ -127,6 +127,11 @@ jQuery(document).ready(function ($) {
           slidesToShow: 2,
           slidesToScroll: 1,
           variableWidth: true,
+          dots: true,
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          speed: 1000,
         },
       },
       {
@@ -136,6 +141,11 @@ jQuery(document).ready(function ($) {
           slidesToScroll: 1,
           centerMode: true,
           variableWidth: true,
+          dots: true,
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          speed: 1000,
         },
       },
     ],
@@ -201,7 +211,7 @@ jQuery(document).ready(function ($) {
 
   //category menu accerdeon
 
-  $(".accordeon > li:not(:nth-child(1)) > a").click(function (e) {
+  $(".accordeon > li:not(:first-child) > a").click(function (e) {
     e.preventDefault();
 
     let menu = $(this).closest(".accordeon");
@@ -220,6 +230,10 @@ jQuery(document).ready(function ($) {
       $(this).parent().addClass("slide");
     }
   });
+
+  if (window.location.href == "/") {
+    console.log("home");
+  }
 
   const aria_menu = jQuery(".aside__category-shop-title").find(
     'a[aria-current="page"]'
@@ -284,4 +298,15 @@ jQuery(document).ready(function ($) {
   jQuery(".woocommerce-error .close").on("click", function () {
     jQuery(".woocommerce-error").hide("fast");
   });
+
+  // показать описание доставки
+  $("label[for='shipping_method_0_flat_rate8']").on("click", function () {
+    $("#shiping__description-ua").show(500);
+  });
+  $('label[for="shipping_method_0_nova_poshta_shipping1"]').on(
+    "click",
+    function () {
+      $("#shiping__description-ua").hide(500);
+    }
+  );
 });

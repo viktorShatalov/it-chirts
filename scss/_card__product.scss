@@ -17,9 +17,11 @@
   justify-content: space-between;
   margin-bottom: 30px;
 }
-.product__card__img-sliders {
+.product__card-left {
   width: 100%;
   max-width: 421px;
+}
+.product__card__img-sliders {
   position: relative;
 }
 .slider-nav__box {
@@ -31,25 +33,43 @@
 .slider-for {
   margin-bottom: 10px;
   .card__product-img {
+    position: relative;
     overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+    max-width: 421px;
+    height: 421px;
     img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      width: 210px;
+      height: 50%;
+      object-fit: contain;
+      position: absolute;
+      top: 110px;
+      left: 105px;
     }
   }
 }
 .slider-nav {
   width: 100%;
   .slider-nav__img {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
     width: 50px;
     height: 50px;
     margin-right: 10px;
     position: relative;
     img {
-      width: 100%;
-      height: 100%;
+      width: 26px;
+      height: 50%;
       object-fit: contain;
+      position: absolute;
+      top: 13px;
+      left: 12px;
     }
     &.slick-current {
       &::after {
@@ -353,6 +373,7 @@
       height: 25px;
       padding: 5px 0 0;
       font-weight: normal;
+      text-align: center;
       &:first-child {
         background: rgb(243, 243, 243);
         font-weight: bold;
@@ -504,6 +525,9 @@
   top: 110px;
   width: 270px;
   text-align: center;
+  .add_to_cart_button {
+    padding: 14px 0;
+  }
   &::before,
   &::after {
     background: url(../img/cert-border-top.png) repeat-x;

@@ -220,6 +220,11 @@ textarea {
     padding: 0;
     @include flex;
     li {
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
       &::after {
         color: rgb(186, 186, 186);
         content: "→";
@@ -269,4 +274,31 @@ textarea {
 .wpcf7 form.sent .wpcf7-response-output {
   background: rgb(237, 241, 222);
   color: rgb(148, 159, 108);
+}
+// sliders dots
+.slick-dots {
+  position: absolute;
+  display: flex;
+  bottom: -22px;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 3;
+  @include transition;
+  li {
+    background-color: transparent;
+    margin: 0 5px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 2px solid rgb(230, 73, 39);
+    cursor: pointer;
+    button {
+      position: absolute;
+      font-size: 0;
+      height: 0;
+    }
+    &.slick-active {
+      background-color: rgb(230, 73, 39);
+    }
+  }
 }
