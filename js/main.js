@@ -67,6 +67,12 @@ jQuery(document).ready(function ($) {
   if (jQuery(window).width() >= 768 && jQuery(window).width() <= 1024) {
     jQuery(".contacts__right").appendTo(jQuery(".page-content-image"));
   }
+  if (jQuery(window).width() >= 768 && jQuery(window).width() <= 959) {
+    jQuery(".product__card-right h1").prependTo(jQuery(".product__card-left"));
+    jQuery(".product__card-description").appendTo(
+      jQuery(".product__card-right")
+    );
+  }
 
   // modal
 
@@ -178,8 +184,9 @@ jQuery(document).ready(function ($) {
     draggable: false,
     variableWidth: true,
     infinite: false,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    infinite: true,
     centerPadding: "0px",
     responsive: [
       {
@@ -231,8 +238,10 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  if (window.location.href == "/") {
-    console.log("home");
+  if (window.location.pathname == "/") {
+    jQuery(".accordeon>li:first-child>a").on("click", function (e) {
+      e.preventDefault();
+    });
   }
 
   const aria_menu = jQuery(".aside__category-shop-title").find(

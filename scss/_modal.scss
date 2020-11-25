@@ -117,7 +117,7 @@
   left: 0;
   background-color: black;
   pointer-events: none;
-  z-index: 5;
+  z-index: 7;
   @include transition;
   &.active {
     opacity: 0.2;

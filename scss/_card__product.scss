@@ -43,11 +43,19 @@
     height: 421px;
     img {
       width: 210px;
-      height: 50%;
+      height: 210px;
       object-fit: contain;
       position: absolute;
-      top: 110px;
+      top: 95px;
       left: 105px;
+    }
+    &:last-child {
+      img {
+        width: 100px;
+        height: 100px;
+        left: 210px;
+        top: 115px;
+      }
     }
   }
 }
@@ -68,7 +76,7 @@
       height: 50%;
       object-fit: contain;
       position: absolute;
-      top: 13px;
+      top: 12px;
       left: 12px;
     }
     &.slick-current {
@@ -80,6 +88,14 @@
         bottom: 0px;
         width: 100%;
         height: 4px;
+      }
+    }
+    &:last-child {
+      img {
+        width: 12px;
+        height: 12px;
+        top: 14px;
+        left: 23px;
       }
     }
   }
@@ -203,6 +219,8 @@
   .ivpa_custom_option.ivpa_text.ivpa_border .ivpa_term,
   .ivpa_attribute.ivpa_text.ivpa_border .ivpa_term,
   .ivpa_attribute[data-attribute="pa_size"].ivpa_text.ivpa_border
+    .ivpa_term.ivpa_active ,
+  .ivpa_attribute[data-attribute="pa_raspolozhenie"].ivpa_text.ivpa_border
     .ivpa_term.ivpa_active {
     border: 2px solid rgba(251, 251, 251, 0);
     color: rgb(0, 0, 0);
@@ -218,6 +236,7 @@
     cursor: pointer;
   }
   .ivpa_attribute {
+    &[data-attribute="pa_raspolozhenie"].ivpa_text.ivpa_border,
     &[data-attribute="pa_color"].ivpa_text.ivpa_border,
     &[data-attribute="pa_size"].ivpa_text.ivpa_border {
       .ivpa_term.ivpa_active {
@@ -225,6 +244,10 @@
         color: black !important;
       }
     }
+    &[data-attribute="pa_raspolozhenie"].ivpa_text.ivpa_border
+      .ivpa_term.ivpa_active.ivpa_clicked,
+    &[data-attribute="pa_raspolozhenie"].ivpa_text.ivpa_border
+      .ivpa_term.ivpa_active.ivpa_clicked.ivpa_outofstock,
     &[data-attribute="pa_color"].ivpa_text.ivpa_border
       .ivpa_term.ivpa_active.ivpa_clicked,
     &[data-attribute="pa_color"].ivpa_text.ivpa_border
@@ -291,6 +314,7 @@
   height: 28px;
   font-size: 14px !important;
   margin: 0 !important;
+  font-weight: bold;
 }
 .table__size {
   position: relative;

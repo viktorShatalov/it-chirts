@@ -264,6 +264,8 @@ input[type="s"] {
   align-items: center;
 }
 .aside__bottom-social {
+  width: 100%;
+  max-width: 120px;
   ul {
     @include flex;
     a.icon {
@@ -316,4 +318,11 @@ input[type="s"] {
 .dgwt-wcas-search-wrapp svg {
   position: relative;
   right: -12px;
+}
+.lang__switcher {
+  font-size: 13px;
+  color: rgb(230, 73, 39);
+  &:hover {
+    text-decoration: underline;
+  }
 }

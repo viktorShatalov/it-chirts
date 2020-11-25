@@ -95,7 +95,7 @@
   position: relative;
   display: block;
   width: 100%;
-  max-width: 215px;
+  max-width: 100%;
   height: 172px;
 }
 .item__img-top,
@@ -526,6 +526,9 @@
       }
     }
   }
+}
+.contacts__right-cooperation {
+  top: -40px;
 }
 .contacts__form {
   .wpcf7-not-valid-tip {

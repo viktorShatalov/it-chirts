@@ -108,6 +108,7 @@ form[name="checkout"] {
 #order_comments_field {
   display: flex;
   flex-direction: column;
+  max-width: 472px;
   label[for="order_comments"] {
     max-width: 100%;
     line-height: 1 !important;
@@ -759,6 +760,8 @@ div.wpcf7-mail-sent-ok,
     margin: 0;
     background: rgb(251, 251, 251);
     border: 2px solid rgb(251, 251, 251);
+    &[for="shipping_method_0_nova_poshta_shipping1"] {
+    }
   }
   label[for="shipping_method_0_flat_rate5"],
   input:checked + label {

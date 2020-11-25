@@ -8,6 +8,8 @@
   .container {
     color: rgb(127, 127, 127);
     line-height: normal;
+    display: flex;
+    align-items: center;
     p {
       padding: 12px 0px;
     }
