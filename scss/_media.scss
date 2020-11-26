@@ -65,7 +65,7 @@
     }
     .aside__logo {
       position: relative;
-      margin: 0;
+      margin: 0 20px 0 0;
     }
   }
   .product__card-left {
@@ -206,6 +206,10 @@
   }
 }
 @media only screen and (min-width: 581px) and (max-width: 800px) {
+  #order_comments_field {
+    max-width: 100%;
+    margin-bottom: 20px !important;
+  }
   .product__card-left {
     margin-right: 0;
     padding: 0 30px;

@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
   });
 
   // subscribe-instagram
-  jQuery(".subscribe-instagram").hide();
+  // jQuery(".subscribe-instagram").hide();
   jQuery(".subscribe-instagram i").on("click", function () {
     jQuery(this).parent().hide();
   });
