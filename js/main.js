@@ -215,6 +215,10 @@ jQuery(document).ready(function ($) {
     $(".item__size .item").removeClass("active");
     $(this).addClass("active");
   });
+  $(".item__type .item").on("click", function () {
+    $(".item__type .item").removeClass("active");
+    $(this).addClass("active");
+  });
 
   //category menu accerdeon
 

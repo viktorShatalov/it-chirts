@@ -1288,7 +1288,7 @@ li.tablinks span::before,
   position: absolute;
   bottom: 20px;
   width: 100%;
-  left: 30%;
+  left: 22%;
 }
 
 .slider-for {
@@ -1313,7 +1313,9 @@ li.tablinks span::before,
      object-fit: contain;
   position: absolute;
   top: 95px;
-  left: 105px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .slider-for .card__product-img:last-child img {
@@ -1321,6 +1323,8 @@ li.tablinks span::before,
   height: 100px;
   left: 210px;
   top: 115px;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
 }
 
 .slider-nav {
@@ -1559,7 +1563,7 @@ li.tablinks span::before,
   background-color: #fbfbfb;
 }
 
-.product__card-atribute .t__shirt.active {
+.product__card-atribute .t__shirt.active, .product__card-atribute .hoody.active {
   border: 2px solid #e64927;
   background-color: #fbfbfb;
   font-weight: bold;
@@ -2413,7 +2417,7 @@ li.tablinks span::before,
 }
 
 .content {
-  padding: 30px 0;
+  padding: 0 0 30px;
   background: white;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(5, 5, 5, 0.05);
           box-shadow: 0px 2px 4px 0px rgba(5, 5, 5, 0.05);

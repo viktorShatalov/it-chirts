@@ -28,7 +28,7 @@
   position: absolute;
   bottom: 20px;
   width: 100%;
-  left: 30%;
+  left: 22%;
 }
 .slider-for {
   margin-bottom: 10px;
@@ -47,7 +47,8 @@
       object-fit: contain;
       position: absolute;
       top: 95px;
-      left: 105px;
+      left: 50%;
+      transform: translateX(-50%)
     }
     &:last-child {
       img {
@@ -55,6 +56,7 @@
         height: 100px;
         left: 210px;
         top: 115px;
+        transform: translateX(-10%)
       }
     }
   }
@@ -269,7 +271,7 @@
   .item {
     background-color: rgb(251, 251, 251);
   }
-  .t__shirt {
+  .t__shirt,.hoody  {
     &.active {
       border: 2px solid rgb(230, 73, 39);
       background-color: rgb(251, 251, 251);
